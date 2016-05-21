@@ -305,7 +305,7 @@ while True:
         handle = pi.i2c_open(1, 0x0a)
         result = i2c_bus.write_byte(OMRON_1, 0x4c);
         sleep(0.5)
-    print(str(D6T_value))
+    # print(str(D6T_value))
     print("\n")
 
     # publish.single("/D6T/Blocks", str(p), retain=True, hostname="www.znh.tw")
