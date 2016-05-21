@@ -307,9 +307,11 @@ while True:
         sleep(0.5)
     print(str(D6T_value))
     print("\n")
-
+    D6T_json = json.dumps(D6T_value)
     # publish.single("/D6T/Blocks", str(p), retain=True, hostname="www.znh.tw")
     publish.single("/D6T/Blocks", str(D6T_value), retain=True, hostname="www.znh.tw")
+    publish.single("/D6T/Blocks", D6T_json, retain=True, hostname="www.znh.tw")
+
 
     # print (p[0], p[1], p[2], p[3])
     # print ("\n")
