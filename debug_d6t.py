@@ -119,14 +119,14 @@ while True:
     (bytes_read, temperature_data) = pi.i2c_read_device(handle, len(temperature_data))
 
     # Display data
-    print(bytes_read)
+    # print(bytes_read)
     if bytes_read == 35:
         # print 'Bytes read from Omron D6T: '+str(bytes_read)
         # print 'Data read from Omron D6T : '
         for x in range(bytes_read):
             ts = time.time()
             timenow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-            # print(temperature_data[x]),
+            print(temperature_data[x]),
             if x == 2:
                 if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 0 is On')
