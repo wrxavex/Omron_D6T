@@ -128,7 +128,7 @@ while True:
             timenow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
             print(temperature_data[x]),
             if x == 2:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 0 is On')
                     p[0] = 1
                     D6T_value["0"] = "1"
@@ -139,7 +139,7 @@ while True:
                     # print ("%s %s" % (timenow, block1))
 
             if x == 4:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 1 is On')
                     p[1] = 1
                     D6T_value["1"] = "1"
@@ -150,7 +150,7 @@ while True:
                     # print ("%s %s" % (timenow, block2))
 
             if x == 6:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 2 is On')
                     p[2] = 1
                     D6T_value["2"] = "1"
@@ -161,7 +161,7 @@ while True:
                     # print ("%s %s" % (timenow, block3))
 
             if x == 8:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 3 is On')
                     p[3] = 1
                     D6T_value["3"] = "1"
@@ -172,7 +172,7 @@ while True:
                     # print ("%s %s" % (timenow, block4))
 
             if x == 10:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 4 is On')
                     p[4] = 1
                     D6T_value["4"] = "1"
@@ -185,7 +185,7 @@ while True:
                 else:
                     pi.write(17, 0)
             if x == 12:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 5 is On')
                     p[5] = 1
                     D6T_value["5"] = "1"
@@ -196,7 +196,7 @@ while True:
                 else:
                     pi.write(27, 0)
             if x == 14:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 6 is On')
                     p[6] = 1
                     D6T_value["6"] = "1"
@@ -208,7 +208,7 @@ while True:
                 else:
                     pi.write(22, 0)
             if x == 16:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 7 is On')
                     p[7] = 1
                     D6T_value["7"] = "1"
@@ -219,7 +219,7 @@ while True:
                 else:
                     pi.write(18, 0)
             if x == 18:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 8 is On')
                     p[8] = 1
                     D6T_value["8"] = "1"
@@ -229,7 +229,7 @@ while True:
                     # publish.single("/D6T/Block9", block9, retain=True, hostname="www.znh.tw")
 
             if x == 10:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 9 is On')
                     p[9] = 1
                     D6T_value["9"] = "1"
@@ -238,7 +238,7 @@ while True:
                     # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
                     # publish.single("/D6T/Block10", block10, retain=True, hostname="www.znh.tw")
             if x == 22:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 10 is On')
                     p[10] = 1
                     D6T_value["10"] = "1"
@@ -247,7 +247,7 @@ while True:
                     # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
                     # publish.single("/D6T/Block11", block11, retain=True, hostname="www.znh.tw")
             if x == 24:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 11 is On')
                     p[11] = 1
                     D6T_value["11"] = "1"
@@ -256,7 +256,7 @@ while True:
                     # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
                     # publish.single("/D6T/Block12", block12, retain=True, hostname="www.znh.tw")
             if x == 26:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 12 is On')
                     p[12] = 1
                     D6T_value["12"] = "1"
@@ -265,7 +265,7 @@ while True:
                     # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
                     # publish.single("/D6T/Block13", block13, retain=True, hostname="www.znh.tw")
             if x == 28:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 13 is On')
                     p[13] = 1
                     D6T_value["13"] = "1"
@@ -274,7 +274,7 @@ while True:
                     # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
                     # publish.single("/D6T/Block14", block14, retain=True, hostname="www.znh.tw")
             if x == 10:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 14 is On')
                     p[14] = 1
                     D6T_value["14"] = "1"
@@ -283,7 +283,7 @@ while True:
                     # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
                     # publish.single("/D6T/Block15", block15, retain=True, hostname="www.znh.tw")
             if x == 32:
-                if (temperature_data[x]) >= (temperature_data[0]) + 40:
+                if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 15 is On')
                     p[15] = 1
                     D6T_value["15"] = "1"
