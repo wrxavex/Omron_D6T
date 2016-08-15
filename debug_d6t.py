@@ -121,8 +121,8 @@ while True:
     # Display data
     # print(bytes_read)
     if bytes_read == 35:
-        print 'Bytes read from Omron D6T: '+str(bytes_read)
-        print 'Data read from Omron D6T : '
+        print 'Bytes read from Omron D6T: ' + str(bytes_read)
+        print 'Data read from Omron D6T : ' + temperature_data
 
 
 
