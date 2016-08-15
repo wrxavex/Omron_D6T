@@ -123,7 +123,7 @@ while True:
     if bytes_read == 35:
         print 'Bytes read from Omron D6T: ' + str(bytes_read)
         print 'tPATA:' + str(256 * temperature_data[1] + temperature_data[0])
-
+        print 'tP[0]:' + str(256 * temperature_data[3] + temperature_data[2])
 
 
         for x in range(bytes_read):
