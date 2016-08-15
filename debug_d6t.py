@@ -75,7 +75,7 @@ D6T_value = {
     "15": "0",
     "16": "0"
 }
-
+TP = [0]*35
 # intialize the pigpio library and socket connection to the daemon (pigpiod)
 pi = pigpio.pi()  # use defaults
 version = pi.get_pigpio_version()
@@ -121,12 +121,16 @@ while True:
     # Display data
     # print(bytes_read)
     if bytes_read == 35:
-        # print 'Bytes read from Omron D6T: '+str(bytes_read)
-        # print 'Data read from Omron D6T : '
+        print 'Bytes read from Omron D6T: '+str(bytes_read)
+        print 'Data read from Omron D6T : '
+
+
+
         for x in range(bytes_read):
+
             ts = time.time()
             timenow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-            print(temperature_data[x]),
+            # print(temperature_data[x]),
             if x == 2:
                 if (temperature_data[x]) >= (temperature_data[0]) + 35:
                     # print('block 0 is On')
@@ -311,7 +315,7 @@ while True:
     D6T_json = json.dumps(D6T_value)
     # publish.single("/D6T/Blocks", str(p), retain=True, hostname="www.znh.tw")
     # publish.single("/D6T/Blocks", str(D6T_value), retain=True, hostname="www.znh.tw")
-    publish.single("/D6T/Blocks", D6T_json, retain=True, hostname="www.znh.tw")
+    publish.single("/D6T/Blocks", D6T_json, retain=True, hostname="localhost")
 
 
     # print (p[0], p[1], p[2], p[3])
