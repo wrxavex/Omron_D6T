@@ -88,7 +88,6 @@ handle = pi.i2c_open(1, 0x0a)  # open Omron D6T device at address 0x0a on bus 1
 result = i2c_bus.write_byte(OMRON_1, 0x4c);
 # print 'write result = '+str(result)
 
-pi.set_mode(17, pigpio.INPUT)
 # for x in range(0, len(temperature_data)):
 # print x
 # Read all data  tem
@@ -351,6 +350,7 @@ while True:
     print (tP[4], tP[5], tP[6], tP[7])
     print (tP[8], tP[9], tP[10], tP[11])
     print (tP[12], tP[13], tP[14], tP[15])
+    pi.set_mode(17, pigpio.INPUT)
     print(pi.read(17))
     time.sleep(0.64)
 
