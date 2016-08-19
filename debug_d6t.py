@@ -149,8 +149,8 @@ while True:
 
         tPEC = temperature_data[34]
 
-        for n in range(16):
-            print("tP[%d] = %d" % (n, tP[n]))
+        # for n in range(16):
+        #     print("tP[%d] = %d" % (n, tP[n]))
 
         print("tPEC:%d" % tPEC)
 
@@ -348,13 +348,10 @@ while True:
     # publish.single("/D6T/Blocks", D6T_json, retain=True, hostname="localhost")
 
     print (tP[0], tP[1], tP[2], tP[3])
-    print ("\n")
     print (tP[4], tP[5], tP[6], tP[7])
-    print ("\n")
     print (tP[8], tP[9], tP[10], tP[11])
-    print ("\n")
     print (tP[12], tP[13], tP[14], tP[15])
-    print ("\n")
+    print(pi.read(17))
     time.sleep(0.64)
 
 # print 'done'
