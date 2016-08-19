@@ -134,7 +134,7 @@ while True:
         print("tPATA: %d" % tPATA )
 
 
-        for i in range(16):
+        for i in range(35, 2):
             tP[i] = 256 * temperature_data[i+1] + temperature_data[i]
             print("tP[%d]"% tP[i])
 
@@ -330,7 +330,7 @@ while True:
     D6T_json = json.dumps(D6T_value)
     # publish.single("/D6T/Blocks", str(p), retain=True, hostname="www.znh.tw")
     # publish.single("/D6T/Blocks", str(D6T_value), retain=True, hostname="www.znh.tw")
-    publish.single("/D6T/Blocks", D6T_json, retain=True, hostname="localhost")
+    # publish.single("/D6T/Blocks", D6T_json, retain=True, hostname="localhost")
 
 
     # print (p[0], p[1], p[2], p[3])
