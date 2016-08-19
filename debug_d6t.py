@@ -78,6 +78,7 @@ D6T_value = {
 tPATA = 0
 tP = [0]*16
 tPEC = 0
+
 # intialize the pigpio library and socket connection to the daemon (pigpiod)
 pi = pigpio.pi()  # use defaults
 version = pi.get_pigpio_version()
@@ -87,6 +88,8 @@ handle = pi.i2c_open(1, 0x0a)  # open Omron D6T device at address 0x0a on bus 1
 # initialize the device based on Omron's appnote 1
 result = i2c_bus.write_byte(OMRON_1, 0x4c);
 # print 'write result = '+str(result)
+
+pi.set_mode(17, pigpio.INPUT)
 
 # for x in range(0, len(temperature_data)):
 # print x
