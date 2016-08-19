@@ -136,7 +136,7 @@ while True:
 
         for i in range(32):
             if i % 2 == 0:
-                tP[i/2] = 256 * temperature_data[i/2+1] + temperature_data[i/2]
+                tP[i/2] = 256 * temperature_data[i+1] + temperature_data[i]
                 print("tP[%d]"% tP[i])
 
 
