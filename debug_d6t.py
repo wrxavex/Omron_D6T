@@ -151,7 +151,7 @@ while True:
         for n in range(16):
             print("tP[%d] = %d" % (n, tP[n]))
 
-        print("tPEC:" % tPEC)
+        print("tPEC:%d" % tPEC)
 
 
         for x in range(bytes_read):
