@@ -146,12 +146,17 @@ while True:
 
         tPEC = temperature_data[34]
 
+        pir = pi.read(17)
+
 
 
         for n in range(16):
             print("tP[%d] = %d" % (n, tP[n]))
 
         print("tPEC:%d" % tPEC)
+
+        if pir:
+            print("pir")
 
 
         for x in range(bytes_read):
