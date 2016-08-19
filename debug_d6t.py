@@ -153,177 +153,179 @@ while True:
 
         print("tPEC:%d" % tPEC)
 
+        for x in range(16):
+            p[x] = tPATA - tP[x]
 
 
-        for x in range(bytes_read):
-
-            ts = time.time()
-            timenow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-            # print(temperature_data[x]),
-            if x == 2:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 0 is On')
-                    p[0] = 1
-                    D6T_value["0"] = "1"
-
-                    block1 = block1 + 1
-                    # publish.single("/D6T/Time", timenow, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block1", block1, hostname="www.znh.tw")
-                    # print ("%s %s" % (timenow, block1))
-
-            if x == 4:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 1 is On')
-                    p[1] = 1
-                    D6T_value["1"] = "1"
-
-                    block2 = block2 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block2", block2, retain=True, hostname="www.znh.tw")
-                    # print ("%s %s" % (timenow, block2))
-
-            if x == 6:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 2 is On')
-                    p[2] = 1
-                    D6T_value["2"] = "1"
-
-                    block3 = block3 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block3", block3, retain=True, hostname="www.znh.tw")
-                    # print ("%s %s" % (timenow, block3))
-
-            if x == 8:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 3 is On')
-                    p[3] = 1
-                    D6T_value["3"] = "1"
-
-                    block4 = block4 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block4", block4, retain=True, hostname="www.znh.tw")
-                    # print ("%s %s" % (timenow, block4))
-
-            if x == 10:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 4 is On')
-                    p[4] = 1
-                    D6T_value["4"] = "1"
-
-                    block5 = block5 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block5", block5, retain=True, hostname="www.znh.tw")
-
-                    pi.write(17, 1)
-                else:
-                    pi.write(17, 0)
-            if x == 12:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 5 is On')
-                    p[5] = 1
-                    D6T_value["5"] = "1"
-                    block6 = block6 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block6", block6, retain=True, hostname="www.znh.tw")
-                    pi.write(27, 1)
-                else:
-                    pi.write(27, 0)
-            if x == 14:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 6 is On')
-                    p[6] = 1
-                    D6T_value["6"] = "1"
-
-                    block7 = block7 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block7", block7, retain=True, hostname="www.znh.tw")
-                    pi.write(22, 1)
-                else:
-                    pi.write(22, 0)
-            if x == 16:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 7 is On')
-                    p[7] = 1
-                    D6T_value["7"] = "1"
-                    block8 = block8 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block8", block8, retain=True, hostname="www.znh.tw")
-                    pi.write(18, 1)
-                else:
-                    pi.write(18, 0)
-            if x == 18:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 8 is On')
-                    p[8] = 1
-                    D6T_value["8"] = "1"
-
-                    block9 = block9 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block9", block9, retain=True, hostname="www.znh.tw")
-
-            if x == 10:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 9 is On')
-                    p[9] = 1
-                    D6T_value["9"] = "1"
-
-                    block10 = block10 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block10", block10, retain=True, hostname="www.znh.tw")
-            if x == 22:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 10 is On')
-                    p[10] = 1
-                    D6T_value["10"] = "1"
-
-                    block11 = block11 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block11", block11, retain=True, hostname="www.znh.tw")
-            if x == 24:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 11 is On')
-                    p[11] = 1
-                    D6T_value["11"] = "1"
-
-                    block12 = block12 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block12", block12, retain=True, hostname="www.znh.tw")
-            if x == 26:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 12 is On')
-                    p[12] = 1
-                    D6T_value["12"] = "1"
-
-                    block13 = block13 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block13", block13, retain=True, hostname="www.znh.tw")
-            if x == 28:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 13 is On')
-                    p[13] = 1
-                    D6T_value["13"] = "1"
-
-                    block14 = block14 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block14", block14, retain=True, hostname="www.znh.tw")
-            if x == 10:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 14 is On')
-                    p[14] = 1
-                    D6T_value["14"] = "1"
-
-                    block15 = block15 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block15", block15, retain=True, hostname="www.znh.tw")
-            if x == 32:
-                if (temperature_data[x]) >= (temperature_data[0]) + 35:
-                    # print('block 15 is On')
-                    p[15] = 1
-                    D6T_value["15"] = "1"
-
-                    block16 = block16 + 1
-                    # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
-                    # publish.single("/D6T/Block16", block16, retain=True, hostname="www.znh.tw")
+        # for x in range(bytes_read):
+        #
+        #     ts = time.time()
+        #     timenow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+        #     # print(temperature_data[x]),
+        #     if x == 2:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 0 is On')
+        #             p[0] = 1
+        #             D6T_value["0"] = "1"
+        #
+        #             block1 = block1 + 1
+        #             # publish.single("/D6T/Time", timenow, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block1", block1, hostname="www.znh.tw")
+        #             # print ("%s %s" % (timenow, block1))
+        #
+        #     if x == 4:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 1 is On')
+        #             p[1] = 1
+        #             D6T_value["1"] = "1"
+        #
+        #             block2 = block2 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block2", block2, retain=True, hostname="www.znh.tw")
+        #             # print ("%s %s" % (timenow, block2))
+        #
+        #     if x == 6:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 2 is On')
+        #             p[2] = 1
+        #             D6T_value["2"] = "1"
+        #
+        #             block3 = block3 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block3", block3, retain=True, hostname="www.znh.tw")
+        #             # print ("%s %s" % (timenow, block3))
+        #
+        #     if x == 8:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 3 is On')
+        #             p[3] = 1
+        #             D6T_value["3"] = "1"
+        #
+        #             block4 = block4 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block4", block4, retain=True, hostname="www.znh.tw")
+        #             # print ("%s %s" % (timenow, block4))
+        #
+        #     if x == 10:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 4 is On')
+        #             p[4] = 1
+        #             D6T_value["4"] = "1"
+        #
+        #             block5 = block5 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block5", block5, retain=True, hostname="www.znh.tw")
+        #
+        #             pi.write(17, 1)
+        #         else:
+        #             pi.write(17, 0)
+        #     if x == 12:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 5 is On')
+        #             p[5] = 1
+        #             D6T_value["5"] = "1"
+        #             block6 = block6 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block6", block6, retain=True, hostname="www.znh.tw")
+        #             pi.write(27, 1)
+        #         else:
+        #             pi.write(27, 0)
+        #     if x == 14:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 6 is On')
+        #             p[6] = 1
+        #             D6T_value["6"] = "1"
+        #
+        #             block7 = block7 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block7", block7, retain=True, hostname="www.znh.tw")
+        #             pi.write(22, 1)
+        #         else:
+        #             pi.write(22, 0)
+        #     if x == 16:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 7 is On')
+        #             p[7] = 1
+        #             D6T_value["7"] = "1"
+        #             block8 = block8 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block8", block8, retain=True, hostname="www.znh.tw")
+        #             pi.write(18, 1)
+        #         else:
+        #             pi.write(18, 0)
+        #     if x == 18:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 8 is On')
+        #             p[8] = 1
+        #             D6T_value["8"] = "1"
+        #
+        #             block9 = block9 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block9", block9, retain=True, hostname="www.znh.tw")
+        #
+        #     if x == 10:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 9 is On')
+        #             p[9] = 1
+        #             D6T_value["9"] = "1"
+        #
+        #             block10 = block10 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block10", block10, retain=True, hostname="www.znh.tw")
+        #     if x == 22:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 10 is On')
+        #             p[10] = 1
+        #             D6T_value["10"] = "1"
+        #
+        #             block11 = block11 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block11", block11, retain=True, hostname="www.znh.tw")
+        #     if x == 24:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 11 is On')
+        #             p[11] = 1
+        #             D6T_value["11"] = "1"
+        #
+        #             block12 = block12 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block12", block12, retain=True, hostname="www.znh.tw")
+        #     if x == 26:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 12 is On')
+        #             p[12] = 1
+        #             D6T_value["12"] = "1"
+        #
+        #             block13 = block13 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block13", block13, retain=True, hostname="www.znh.tw")
+        #     if x == 28:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 13 is On')
+        #             p[13] = 1
+        #             D6T_value["13"] = "1"
+        #
+        #             block14 = block14 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block14", block14, retain=True, hostname="www.znh.tw")
+        #     if x == 10:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 14 is On')
+        #             p[14] = 1
+        #             D6T_value["14"] = "1"
+        #
+        #             block15 = block15 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block15", block15, retain=True, hostname="www.znh.tw")
+        #     if x == 32:
+        #         if (temperature_data[x]) >= (temperature_data[0]) + 35:
+        #             # print('block 15 is On')
+        #             p[15] = 1
+        #             D6T_value["15"] = "1"
+        #
+        #             block16 = block16 + 1
+        #             # publish.single("/D6T/Time", timenow, retain=True, hostname="www.znh.tw")
+        #             # publish.single("/D6T/Block16", block16, retain=True, hostname="www.znh.tw")
 
     else:
         print('not 45')
@@ -350,6 +352,12 @@ while True:
     print (tP[4], tP[5], tP[6], tP[7])
     print (tP[8], tP[9], tP[10], tP[11])
     print (tP[12], tP[13], tP[14], tP[15])
+
+    print (p[0], p[1], p[2], p[3])
+    print (p[4], p[5], p[6], p[7])
+    print (p[8], p[9], p[10], p[11])
+    print (p[12], p[13], p[14], p[15])
+
     pi.set_mode(17, pigpio.INPUT)
     print(pi.read(17))
     time.sleep(0.64)
