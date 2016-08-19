@@ -148,7 +148,7 @@ while True:
         tP[12] = 256 * temperature_data[27] + temperature_data[26]
         tP[13] = 256 * temperature_data[29] + temperature_data[28]
         tP[14] = 256 * temperature_data[31] + temperature_data[30]
-        tp[15] = 256 * temperature_data[33] + temperature_data[32]
+        tP[15] = 256 * temperature_data[33] + temperature_data[32]
 
         for n in range(16):
             print("tP[%d] = %d" % n, tP[n])
