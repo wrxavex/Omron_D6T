@@ -435,6 +435,40 @@ while True:
         d6t[2] |= 0x03
         d6t[3] |= 0x03
 
+    if p[8] == 1:
+        d6t[4] |= 0xC0
+        d6t[5] |= 0xC0
+
+    if p[9] == 1:
+        d6t[4] |= 0x30
+        d6t[5] |= 0x30
+
+    if p[10] == 1:
+        d6t[4] |= 0x0C
+        d6t[5] |= 0x0C
+
+    if p[11] == 1:
+        d6t[4] |= 0x03
+        d6t[5] |= 0x03
+
+    if p[12] == 1:
+        d6t[6] |= 0xC0
+        d6t[7] |= 0xC0
+
+    if p[13] == 1:
+        d6t[6] |= 0x30
+        d6t[7] |= 0x30
+
+    if p[14] == 1:
+        d6t[6] |= 0x0C
+        d6t[7] |= 0x0C
+
+    if p[15] == 1:
+        d6t[6] |= 0x03
+        d6t[7] |= 0x03
+
+
+
     for i in range(0, 8):
         resp = spi.xfer([columns[i], d6t[i]])
 
