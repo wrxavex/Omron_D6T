@@ -133,13 +133,25 @@ while True:
         tPATA = 256 * temperature_data[1] + temperature_data[0]
         print("tPATA: %d" % tPATA )
 
+        tP[0] = 256 * temperature_data[3] + temperature_data[2]
+        tP[1] = 256 * temperature_data[5] + temperature_data[4]
+        tP[2] = 256 * temperature_data[7] + temperature_data[6]
+        tP[3] = 256 * temperature_data[9] + temperature_data[8]
+        tP[4] = 256 * temperature_data[11] + temperature_data[10]
+        tP[5] = 256 * temperature_data[13] + temperature_data[12]
+        tP[6] = 256 * temperature_data[15] + temperature_data[14]
+        tP[7] = 256 * temperature_data[17] + temperature_data[16]
+        tP[8] = 256 * temperature_data[19] + temperature_data[18]
+        tP[9] = 256 * temperature_data[21] + temperature_data[20]
+        tP[10] = 256 * temperature_data[23] + temperature_data[22]
+        tP[11] = 256 * temperature_data[25] + temperature_data[24]
+        tP[12] = 256 * temperature_data[27] + temperature_data[26]
+        tP[13] = 256 * temperature_data[29] + temperature_data[28]
+        tP[14] = 256 * temperature_data[31] + temperature_data[30]
+        tp[15] = 256 * temperature_data[33] + temperature_data[32]
 
-        for i in range(32):
-            if i % 2 == 0:
-                tP[i/2] = 256 * temperature_data[i+1] + temperature_data[i]
-                print("tP[%d]"% tP[i])
-
-
+        for n in range(16):
+            print("tP[%d] = %d" % n, tP[n])
 
 
         for x in range(bytes_read):
