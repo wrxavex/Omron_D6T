@@ -149,7 +149,7 @@ while True:
 
         tPEC = temperature_data[34]
 
-        pir = pi.read(11)
+        pir = pi.read(17)
 
 
 
