@@ -154,7 +154,7 @@ while True:
         print("tPEC:%d" % tPEC)
 
         for x in range(16):
-            p[x] = tP[x] - tP[x]
+            p[x] = tP[x] - tPATA
 
 
         # for x in range(bytes_read):
