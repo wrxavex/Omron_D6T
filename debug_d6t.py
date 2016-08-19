@@ -350,15 +350,15 @@ while True:
     # publish.single("/D6T/Blocks", D6T_json, retain=True, hostname="localhost")
 
 
-    # print (p[0], p[1], p[2], p[3])
-    # print ("\n")
-    # print (p[4], p[5], p[6], p[7])
-    # print ("\n")
-    # print (p[8], p[9], p[10], p[11])
-    # print ("\n")
-    # print (p[12], p[13], p[14], p[15])
-    # print ("\n")
-    sleep(0.16)
+    print (tP[0], tP[1], tP[2], tP[3])
+    print ("\n")
+    print (tP[4], tP[5], tP[6], tP[7])
+    print ("\n")
+    print (tP[8], tP[9], tP[10], tP[11])
+    print ("\n")
+    print (tP[12], tP[13], tP[14], tP[15])
+    print ("\n")
+    sleep(0.64)
 
 # print 'done'
 
