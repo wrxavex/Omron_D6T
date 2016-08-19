@@ -75,7 +75,9 @@ D6T_value = {
     "15": "0",
     "16": "0"
 }
-TP = [0]*35
+tPATA = 0
+tP = [0]*16
+tPEC = 0
 # intialize the pigpio library and socket connection to the daemon (pigpiod)
 pi = pigpio.pi()  # use defaults
 version = pi.get_pigpio_version()
@@ -127,6 +129,14 @@ while True:
         print 'tP[1]:' + str((256 * temperature_data[5] + temperature_data[4]))
         print 'tP[2]:' + str((256 * temperature_data[5] + temperature_data[4]))
         print 'tP[3]:' + str((256 * temperature_data[7] + temperature_data[6]))
+
+        tPATA = 256 * temperature_data[1] + temperature_data[0]
+        print("tPATA: %d" % tPATA )
+
+
+        for i in range(16):
+            tP[i] = 256 * temperature_data[i+1] + temperature_data[i]
+            print("tP[%d]"% tP[i])
 
 
 
