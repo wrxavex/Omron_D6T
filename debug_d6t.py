@@ -90,7 +90,7 @@ result = i2c_bus.write_byte(OMRON_1, 0x4c);
 # print 'write result = '+str(result)
 
 pi.set_mode(17, pigpio.INPUT)
-
+print(pi.read(17))
 # for x in range(0, len(temperature_data)):
 # print x
 # Read all data  tem
