@@ -154,7 +154,7 @@ while True:
 
         print("tPEC:%d" % tPEC)
 
-        print((pi.read(17)))
+        print(pi.read(17))
 
         for x in range(bytes_read):
 
