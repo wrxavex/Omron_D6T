@@ -358,7 +358,7 @@ while True:
     # print ("\n")
     # print (p[12], p[13], p[14], p[15])
     # print ("\n")
-    sleep(0.64)
+    sleep(0.16)
 
 # print 'done'
 
