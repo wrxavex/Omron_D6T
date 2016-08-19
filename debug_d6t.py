@@ -122,6 +122,8 @@ while True:
 
     # print ('count:',count)
     (bytes_read, temperature_data) = pi.i2c_read_device(handle, len(temperature_data))
+    print(pi.read(17))
+
 
     # Display data
     # print(bytes_read)
@@ -356,7 +358,6 @@ while True:
     # print ("\n")
     # print (p[12], p[13], p[14], p[15])
     # print ("\n")
-    print(pi.read(17))
     sleep(0.64)
 
 # print 'done'
