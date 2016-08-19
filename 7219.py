@@ -32,6 +32,8 @@ d6t4 = 0x03
 
 d6t = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
 
+columns = [0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8]
+
 b1 = 1
 b2 = 1
 b3 = 1
@@ -43,8 +45,7 @@ b8 = 1
 
 if b1 == 1:
     d6t[0] |= 0xC0
-	d6t[1] |= 0xC0
-
+    d6t[1] |= 0xC0
 if b2 == 1:
     d6t[0] |= 0x30
     d6t[1] |= 0x30
@@ -59,19 +60,21 @@ if b4 == 1:
 
 if b5 == 1:
     d6t[2] |= 0xC0
-	d6t[3] |= 0xC0
+    d6t[3] |= 0xC0
 
 if b6 == 1:
     d6t[2] |= 0x30
-	d6t[3] |= 0x30
+    d6t[3] |= 0x30
 
 if b7 == 1:
     d6t[2] |= 0x0C
-	d6t[3] |= 0x0C
+    d6t[3] |= 0x0C
 
 if b8 == 1:
     d6t[2] |= 0x03
-	d6t[3] |= 0x03
+    d6t[3] |= 0x03
+
+Initialise()
 
 for i in range(0,8):
     resp = spi.xfer([columns[i], d6t[i]])
