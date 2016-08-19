@@ -155,9 +155,7 @@ while True:
 
         print("tPEC:%d" % tPEC)
 
-        if pir:
-            print("pir")
-
+        print(pir)
 
         for x in range(bytes_read):
 
