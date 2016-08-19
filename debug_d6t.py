@@ -80,52 +80,12 @@ d6t = [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
 
 columns = [0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8]
 
-b1 = 0
-b2 = 1
-b3 = 0
-b4 = 1
-b5 = 1
-b6 = 0
-b7 = 1
-b8 = 0
-
-if b1 == 1:
-    d6t[0] |= 0xC0
-    d6t[1] |= 0xC0
-if b2 == 1:
-    d6t[0] |= 0x30
-    d6t[1] |= 0x30
-
-if b3 == 1:
-    d6t[0] |= 0x0C
-    d6t[1] |= 0x0C
-
-if b4 == 1:
-    d6t[0] |= 0x03
-    d6t[1] |= 0x03
-
-if b5 == 1:
-    d6t[2] |= 0xC0
-    d6t[3] |= 0xC0
-
-if b6 == 1:
-    d6t[2] |= 0x30
-    d6t[3] |= 0x30
-
-if b7 == 1:
-    d6t[2] |= 0x0C
-    d6t[3] |= 0x0C
-
-if b8 == 1:
-    d6t[2] |= 0x03
-    d6t[3] |= 0x03
 
 Initialise()
 
-for i in range(0,8):
-    resp = spi.xfer([columns[i], d6t[i]])
 
-spi.close
+
+
 
 i2c_bus = smbus.SMBus(1)
 OMRON_1 = 0x0a  # 7 bit I2C address of Omron MEMS Temp Sensor D6T-44L
@@ -441,9 +401,56 @@ while True:
 
     pi.set_mode(17, pigpio.INPUT)
     print(pi.read(17))
+
+    b1 = 0
+    b2 = 1
+    b3 = 0
+    b4 = 1
+    b5 = 1
+    b6 = 0
+    b7 = 1
+    b8 = 0
+
+    if p[0] == 1:
+        d6t[0] |= 0xC0
+        d6t[1] |= 0xC0
+    if p[1] == 1:
+        d6t[0] |= 0x30
+        d6t[1] |= 0x30
+
+    if p[2] == 1:
+        d6t[0] |= 0x0C
+        d6t[1] |= 0x0C
+
+    if p[3] == 1:
+        d6t[0] |= 0x03
+        d6t[1] |= 0x03
+
+    if p[4] == 1:
+        d6t[2] |= 0xC0
+        d6t[3] |= 0xC0
+
+    if p[5] == 1:
+        d6t[2] |= 0x30
+        d6t[3] |= 0x30
+
+    if p[6] == 1:
+        d6t[2] |= 0x0C
+        d6t[3] |= 0x0C
+
+    if p[7] == 1:
+        d6t[2] |= 0x03
+        d6t[3] |= 0x03
+
+    for i in range(0, 8):
+        resp = spi.xfer([columns[i], d6t[i]])
+
+
     time.sleep(0.64)
 
 # print 'done'
 
 pi.i2c_close(handle)
 pi.stop()
+
+spi.close
