@@ -11,7 +11,6 @@ import sys
 import getopt
 import time
 import pigpio
-from time import sleep
 import datetime
 import sys
 import os
@@ -120,7 +119,6 @@ while True:
     }
 
     # print ('count:',count)
-    print(pi.read(17))
 
     (bytes_read, temperature_data) = pi.i2c_read_device(handle, len(temperature_data))
 
@@ -349,7 +347,6 @@ while True:
     # publish.single("/D6T/Blocks", str(D6T_value), retain=True, hostname="www.znh.tw")
     # publish.single("/D6T/Blocks", D6T_json, retain=True, hostname="localhost")
 
-
     print (tP[0], tP[1], tP[2], tP[3])
     print ("\n")
     print (tP[4], tP[5], tP[6], tP[7])
@@ -358,7 +355,7 @@ while True:
     print ("\n")
     print (tP[12], tP[13], tP[14], tP[15])
     print ("\n")
-    sleep(0.64)
+    time.sleep(0.64)
 
 # print 'done'
 
