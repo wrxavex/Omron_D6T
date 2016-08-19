@@ -134,7 +134,7 @@ while True:
         print("tPATA: %d" % tPATA )
 
 
-        for i in list(range(32, 2)):
+        for i in list(range(16, 2)):
             tP[i] = 256 * temperature_data[i+1] + temperature_data[i]
             print("tP[%d]"% tP[i])
 
