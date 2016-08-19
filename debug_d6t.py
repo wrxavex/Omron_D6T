@@ -150,8 +150,8 @@ while True:
         tP[14] = 256 * temperature_data[31] + temperature_data[30]
         tP[15] = 256 * temperature_data[33] + temperature_data[32]
 
-        for n in range(15):
-            print("tP[%d] = %d" % n, tP[n])
+        for n in range(16):
+            print("tP[%d] = %d" % (n, tP[n]))
 
 
         for x in range(bytes_read):
