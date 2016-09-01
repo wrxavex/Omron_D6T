@@ -388,10 +388,10 @@ while True:
     # publish.single("/D6T/Blocks", str(D6T_value), retain=True, hostname="www.znh.tw")
     # publish.single("/D6T/Blocks", D6T_json, retain=True, hostname="localhost")
 
-    print (tP[0], tP[1], tP[2], tP[3])
-    print (tP[4], tP[5], tP[6], tP[7])
-    print (tP[8], tP[9], tP[10], tP[11])
-    print (tP[12], tP[13], tP[14], tP[15])
+    print (tP[3], tP[2], tP[1], tP[0])
+    print (tP[7], tP[6], tP[5], tP[4])
+    print (tP[11], tP[10], tP[9], tP[8])
+    print (tP[15], tP[14], tP[13], tP[12])
 
     print (p[0], p[1], p[2], p[3])
     print (p[4], p[5], p[6], p[7])
