@@ -393,10 +393,10 @@ while True:
     print (tP[11], tP[10], tP[9], tP[8])
     print (tP[15], tP[14], tP[13], tP[12])
 
-    print (p[0], p[1], p[2], p[3])
-    print (p[4], p[5], p[6], p[7])
-    print (p[8], p[9], p[10], p[11])
-    print (p[12], p[13], p[14], p[15])
+    print (p[3], p[2], p[1], p[0])
+    print (p[7], p[6], p[5], p[4])
+    print (p[11], p[10], p[9], p[8])
+    print (p[15], p[14], p[13], p[12])
 
     pi.set_mode(17, pigpio.INPUT)
     print(pi.read(17))
