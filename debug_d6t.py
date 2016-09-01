@@ -191,7 +191,7 @@ while True:
 
         for x in range(16):
             p[x] = tP[x] - tPATA
-            if p[x] > 10:
+            if p[x] > 15:
                 p[x] = 1
             else:
                 p[x] = 0
