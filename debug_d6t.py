@@ -473,7 +473,7 @@ while True:
         resp = spi.xfer([columns[i], d6t[i]])
 
 
-    time.sleep(0.64)
+    time.sleep(0.32)
 
 # print 'done'
 
