@@ -23,9 +23,7 @@ def light_3second():
     led.on()
 
     for light in lights:
-        b.set_light(1, 'on', True)
-        b.set_light(2, 'on', True)
-        b.set_light(3, 'on', True)
+        light.on = True
         sleep(1)
 
     for light in lights:
@@ -34,7 +32,7 @@ def light_3second():
         sleep(2)
 
     for light in lights:
-        b.set_light([1,2,3], 'on', True)
+        light.on = False
         sleep(2)
 
 
