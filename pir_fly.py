@@ -11,15 +11,9 @@ b = Bridge('192.168.1.178', 'YxPYRWNawywC-sKHkjuRho7iOwMMSrn3di2ETF74')  # Enter
 
 lights = b.get_light_objects()
 
+def lights_change():
 
-def lights_init():
-    global lights
-    print ('light init')
-    for light in range(1,4):
-        print ('init%d' % light)
-        if b.get_light(light, 'on') == True:
-            print ('init%d' % light )
-            b.set_light(light, 'on', False)
+
 
 
 led = LED(27)
@@ -28,7 +22,11 @@ button = Button(17, pull_up=False)
 def light_3second():
   print("light")
   led.on()
-  sleep(3)
+
+  for light in lights:
+      light.brightness = 250
+      light.xy = [random.random(), random.random()]
+      sleep(2)
   led.off()
 
 button.when_pressed = light_3second
