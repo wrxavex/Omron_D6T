@@ -34,7 +34,7 @@ def light_3second():
         sleep(2)
 
     for light in lights:
-        b.setlight([1,2,3], 'on', True)_
+        b.setlight([1,2,3], 'on', True)
         sleep(2)
 
 
