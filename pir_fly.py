@@ -11,6 +11,7 @@ b = Bridge('192.168.1.178', 'YxPYRWNawywC-sKHkjuRho7iOwMMSrn3di2ETF74')  # Enter
 
 lights = b.get_light_objects()
 
+
 def lights_init():
     global lights
     print ('light init')
