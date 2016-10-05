@@ -1,6 +1,7 @@
 from gpiozero import LED, Button
 from signal import pause
 from time import sleep
+import random
 
 from phue import Bridge
 import logging
