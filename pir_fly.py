@@ -23,9 +23,22 @@ def light_3second():
     led.on()
 
     for light in lights:
+        b.set_light(1, 'on')
+        b.set_light(2, 'on')
+        b.set_light(3, 'on')
+        sleep(1)
+
+    for light in lights:
         light.brightness = 250
         light.xy = [random.random(), random.random()]
         sleep(2)
+
+    for light in lights:
+        b.setlight([1,2,3], 'on', True)_
+        sleep(2)
+
+
+
     led.off()
 
 button.when_pressed = light_3second
