@@ -23,10 +23,7 @@ def light_1():
     print("light 1")
     led.on()
 
-    for light in lights:
-        light.on = True
-        sleep(1)
-
+    lights[0].on = True
     lights[0].brightness = 200
     lights[0].xy = [random.random(), random.random()]
     sleep(2)
@@ -42,10 +39,8 @@ def light_2():
     print("light 2")
     led.on()
 
-    for light in lights:
-        light.on = True
-        sleep(1)
 
+    lights[1].on = True
     lights[1].brightness = 200
     lights[1].xy = [random.random(), random.random()]
     sleep(2)
