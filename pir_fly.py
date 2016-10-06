@@ -31,7 +31,6 @@ def light_1():
 
     for light in lights:
         light.on = False
-        sleep(2)
 
     led.off()
     print("light 1 off")
@@ -48,7 +47,6 @@ def light_2():
 
     for light in lights:
         light.on = False
-        sleep(2)
 
     led.off()
     print("light 2 off")
