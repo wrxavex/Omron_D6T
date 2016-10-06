@@ -26,7 +26,7 @@ def light_1():
     lights[0].on = True
     lights[0].brightness = 200
     lights[0].xy = [random.random(), random.random()]
-    sleep(2)
+    sleep(5)
 
 
     for light in lights:
@@ -43,7 +43,7 @@ def light_2():
     lights[2].on = True
     lights[2].brightness = 200
     lights[2].xy = [random.random(), random.random()]
-    sleep(2)
+    sleep(5)
 
     for light in lights:
         light.on = False
