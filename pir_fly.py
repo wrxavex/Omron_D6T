@@ -26,7 +26,7 @@ class light_status():
     def __init__(self):
 
         self.light1_status = 0
-        self.light2.status = 0
+        self.light2_status = 0
 
 ls = light_status()
 
