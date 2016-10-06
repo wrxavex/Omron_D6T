@@ -53,10 +53,10 @@ def light_2(sleeptime, *args):
     print("light 2 off")
 
 
-def open_light1:
+def open_light1():
     thread.start_new_thread(light_1, (1, ""))
 
-def open_light2:
+def open_light2():
     thread.start_new_thread(light_2, (1, ""))
 
 button1.when_pressed = open_light1
