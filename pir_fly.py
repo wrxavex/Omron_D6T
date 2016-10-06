@@ -21,6 +21,16 @@ button1 = Button(17, pull_up=False)
 button2 = Button(18, pull_up=False)
 
 
+class light_status():
+
+    def __init__(self):
+
+        self.light1_status = 0
+        self.light2.status = 0
+
+ls = light_status()
+
+
 def light_1(sleeptime, *args):
     print("light 1 on")
     led.on()
@@ -35,6 +45,7 @@ def light_1(sleeptime, *args):
 
     led.off()
     print("light 1 off")
+    ls.light1_status = 0
 
 
 def light_2(sleeptime, *args):
@@ -51,13 +62,17 @@ def light_2(sleeptime, *args):
 
     led.off()
     print("light 2 off")
+    ls.light2_status = 0
 
 
 def open_light1():
-    thread.start_new_thread(light_1, (1, ""))
+    if ls.light1_status == 0:
+        ls.light1_status = 1
+        thread.start_new_thread(light_1, (1, ""))
 
 def open_light2():
-    thread.start_new_thread(light_2, (1, ""))
+    if ls.light2_status == 2:
+        thread.start_new_thread(light_2, (1, ""))
 
 button1.when_pressed = open_light1
 button2.when_pressed = open_light2
