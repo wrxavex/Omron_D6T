@@ -71,7 +71,8 @@ def open_light1():
         thread.start_new_thread(light_1, (1, ""))
 
 def open_light2():
-    if ls.light2_status == 2:
+    if ls.light2_status == 0:
+        ls.light2_status = 1
         thread.start_new_thread(light_2, (1, ""))
 
 button1.when_pressed = open_light1
