@@ -19,7 +19,7 @@ led = LED(27)
 button1 = Button(17, pull_up=False)
 button2 = Button(18, pull_up=False)
 
-def light_3second():
+def light_1():
     print("light")
     led.on()
 
@@ -27,10 +27,10 @@ def light_3second():
         light.on = True
         sleep(1)
 
-    for light in lights:
-        light.brightness = 250
-        light.xy = [random.random(), random.random()]
-        sleep(2)
+    lights[1].brightness = 200
+    lights[1].xy = [random.random(), random.random()]
+    sleep(2)
+
 
     for light in lights:
         light.on = False
@@ -38,11 +38,24 @@ def light_3second():
 
     led.off()
 
-def print1():
-    print("PIR 1")
+def light_2():
+    print("light")
+    led.on()
 
-def print2():
-    print("PIR 2")
+    for light in lights:
+        light.on = True
+        sleep(1)
+
+    lights[2].brightness = 200
+    lights[2].xy = [random.random(), random.random()]
+    sleep(2)
+
+    for light in lights:
+        light.on = False
+        sleep(2)
+
+    led.off()
+
 
 
 
