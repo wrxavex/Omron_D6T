@@ -20,7 +20,7 @@ button1 = Button(17, pull_up=False)
 button2 = Button(18, pull_up=False)
 
 def light_1():
-    print("light 1")
+    print("light 1 on")
     led.on()
 
     lights[0].on = True
@@ -34,9 +34,10 @@ def light_1():
         sleep(2)
 
     led.off()
+    print("light 1 off")
 
 def light_2():
-    print("light 2")
+    print("light 2 on")
     led.on()
 
 
@@ -50,6 +51,7 @@ def light_2():
         sleep(2)
 
     led.off()
+    print("light 2 off")
 
 
 
