@@ -16,7 +16,9 @@ b = Bridge('192.168.1.178', 'YxPYRWNawywC-sKHkjuRho7iOwMMSrn3di2ETF74')  # Enter
 lights = b.get_light_objects()
 
 led = LED(27)
-button = Button(17, pull_up=False)
+button1 = Button(17, pull_up=False)
+button2 = Button(25)
+button3 = Button(18)
 
 def light_3second():
     print("light")
@@ -35,10 +37,19 @@ def light_3second():
         light.on = False
         sleep(2)
 
-
-
     led.off()
 
-button.when_pressed = light_3second
+def print1():
+    print("PIR 1")
+
+def print2():
+    print("PIR 2")
+
+def print3():
+    print("PIR 3")
+
+button1.when_pressed = print1
+button2.when_pressed = print2
+button3.when_pressed = print3
 
 pause()
