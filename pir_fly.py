@@ -20,15 +20,15 @@ button1 = Button(17, pull_up=False)
 button2 = Button(18, pull_up=False)
 
 def light_1():
-    print("light")
+    print("light 1")
     led.on()
 
     for light in lights:
         light.on = True
         sleep(1)
 
-    lights[1].brightness = 200
-    lights[1].xy = [random.random(), random.random()]
+    lights[0].brightness = 200
+    lights[0].xy = [random.random(), random.random()]
     sleep(2)
 
 
@@ -39,15 +39,15 @@ def light_1():
     led.off()
 
 def light_2():
-    print("light")
+    print("light 2")
     led.on()
 
     for light in lights:
         light.on = True
         sleep(1)
 
-    lights[2].brightness = 200
-    lights[2].xy = [random.random(), random.random()]
+    lights[1].brightness = 200
+    lights[1].xy = [random.random(), random.random()]
     sleep(2)
 
     for light in lights:
