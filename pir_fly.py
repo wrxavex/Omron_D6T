@@ -17,8 +17,8 @@ lights = b.get_light_objects()
 
 led = LED(27)
 button1 = Button(17, pull_up=False)
-button2 = Button(25)
-button3 = Button(18)
+button2 = Button(25, pull_up=False)
+button3 = Button(18, pull_up=False)
 
 def light_3second():
     print("light")
