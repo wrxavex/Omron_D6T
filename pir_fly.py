@@ -52,9 +52,9 @@ def light_2(sleeptime, *args):
     print("light 2 on")
     led.on()
 
-    lights[2].on = True
-    lights[2].brightness = 200
-    lights[2].xy = [random.random(), random.random()]
+    lights[1].on = True
+    lights[1].brightness = 200
+    lights[1].xy = [random.random(), random.random()]
     sleep(5)
 
     for light in lights:
