@@ -59,7 +59,7 @@ def light_2():
 
 
 
-button1.when_pressed = print1
-button2.when_pressed = print2
+button1.when_pressed = light_1
+button2.when_pressed = light_2
 
 pause()
