@@ -49,8 +49,8 @@ if __name__ == '__main__':
     for x in range(10):
         msg = osc_message_builder.OscMessageBuilder(address="/d6t1")
         y = random.random()
-        msg.add_arg(y)
         msg.add_arg(x)
+        msg.add_arg(y)
         msg = msg.build()
         client.send(msg)
         time.sleep(1)
