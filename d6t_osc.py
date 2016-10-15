@@ -318,9 +318,9 @@ while True:
     msg.add_arg(count)
     for x in range(16):
         msg.add_arg(tP[x])
+    msg.add_arg(tPATA)
     msg = msg.build()
     client.send(msg)
-
 
     time.sleep(0.32)
 
