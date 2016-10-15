@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--ip",
-                        default="192.0.0.1", help="The ip to listen on")
+                        default="192.168.1.139", help="The ip to listen on")
     parser.add_argument("--port",
                         type=int, default=9997, help="The port to listen on")
     args = parser.parse_args()
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     client = udp_client.UDPClient(args.ip, args.port)
 
     for x in range(10):
-        msg = osc_message_builder.OscMessageBuilder(address="/filter")
+        msg = osc_message_builder.OscMessageBuilder(address="/d6t1")
         msg.add_arg(random.random())
         msg = msg.build()
         client.send(msg)
