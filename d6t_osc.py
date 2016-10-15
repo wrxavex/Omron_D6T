@@ -316,7 +316,8 @@ while True:
 
     msg = osc_message_builder.OscMessageBuilder(address="/d6t1")
     msg.add_arg(count)
-    msg.add_arg(tP[0])
+    for x in range(16):
+        msg.add_arg(tP[x])
     msg = msg.build()
     client.send(msg)
 
