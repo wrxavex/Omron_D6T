@@ -54,9 +54,7 @@ if __name__ == '__main__':
         msg = msg.build()
         client.send(msg)
         time.sleep(1)
-        print("send")
-        print(msg)
-
+        print("x:%d y: %f" %(x, y))
 
     # dispatcher = dispatcher.Dispatcher()
     # dispatcher.map("/omxplayer", display_osc_master_message)
