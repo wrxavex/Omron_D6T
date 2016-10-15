@@ -52,6 +52,8 @@ if __name__ == '__main__':
         msg = msg.build()
         client.send(msg)
         time.sleep(1)
+        print("send")
+        print(msg)
 
 
     # dispatcher = dispatcher.Dispatcher()
