@@ -9,30 +9,13 @@ def display_osc_master_message(unused_addr, args1, args2, args3, args4, args5, a
                 args13, args14, args15):
     try:
 
-        ds.device_status[1] = args1     # osc source
-        ds.device_status[2] = args2     # to message
-        ds.device_status[3] = args3     # played counts
-        ds.device_status[4] = args4     # 1st device status
-        ds.device_status[5] = args5     # 2rd device status
-        ds.device_status[6] = args6     # 3th device status
-        ds.device_status[7] = args7
-        ds.device_status[8] = args8
-        ds.device_status[9] = args9
-        ds.device_status[10] = args10
-        ds.device_status[11] = args11
-        ds.device_status[12] = args12
-        ds.device_status[13] = args13
-        ds.device_status[14] = args14
-        ds.device_status[15] = args15
+        # args1 is osc source
+        # args2 is to message
+        # played counts
+        # 1st device status
+        # 2rd device status
+        # 3th device status
 
-        if ds.device_status[4] == 1:
-            ds.last_play = time.time()
-
-        # print('args={0} args2={1} args3={2} args4={3}'.format( ds.device_status[1], ds.device_status[2], ds.device_status[3], ds.device_status[4]))
-        # print(args1)
-        # print(args2)
-        # print(args3)
-        # print(args4)
     except:
         pass
         print("osc message error")
