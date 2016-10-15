@@ -8,6 +8,7 @@ import _thread
 def display_osc_master_message(unused_addr, args1, args2, args3, args4, args5, args6, args7, args8, args9, args10, args11, args12,
                 args13, args14, args15):
     try:
+        print(args1)
 
         # args1 is osc source
         # args2 is to message
