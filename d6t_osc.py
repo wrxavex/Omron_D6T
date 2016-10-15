@@ -2,6 +2,9 @@
 
 from pythonosc import dispatcher
 from pythonosc import osc_server
+
+import argparse
+
 import _thread
 
 
@@ -28,6 +31,14 @@ def main(threadName, delay):
 
 
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--ip",
+                        default="127.0.0.1", help="The ip to listen on")
+    parser.add_argument("--port",
+                        type=int, default=9997, help="The port to listen on")
+    args = parser.parse_args()
+
     dispatcher = dispatcher.Dispatcher()
     dispatcher.map("/omxplayer", display_osc_master_message)
     print("Osc dispatcher ")
