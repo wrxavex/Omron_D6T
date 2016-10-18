@@ -31,7 +31,7 @@ import spidev
 
 id = 2
 count = 0
-
+target_ip = 184
 os.environ['TZ'] = 'Asia/Taipei'
 time.tzset()
 
@@ -135,7 +135,7 @@ count = 0
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--ip",
-                    default="192.168.1.139", help="The ip to listen on")
+                    default="192.168.1.target_ip", help="The ip to listen on")
 parser.add_argument("--port",
                     type=int, default=9997, help="The port to listen on")
 args = parser.parse_args()
