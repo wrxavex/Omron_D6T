@@ -29,7 +29,7 @@ import json
 # max7219 display
 import spidev
 
-
+id = 2
 count = 0
 
 os.environ['TZ'] = 'Asia/Taipei'
@@ -313,9 +313,12 @@ while True:
     for i in range(0, 8):
         resp = spi.xfer([columns[i], d6t[i]])
 
-
-    msg = osc_message_builder.OscMessageBuilder(address="/d6t1")
+    if id == 1:
+        msg = osc_message_builder.OscMessageBuilder(address="/d6t1")
+    elif id ==2:
+        msg = osc_message_builder.OscMessageBuilder(address="/d6t2")
     msg.add_arg(count)
+
     for x in range(16):
         msg.add_arg(tP[x])
     msg.add_arg(tPATA)
