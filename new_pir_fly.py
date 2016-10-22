@@ -25,8 +25,9 @@ class light_status():
 
     def __init__(self):
 
-        self.light1_status = 0
-        self.light2_status = 0
+        self.light1_status = 1
+        self.light2_status = 1
+        self.light3_status = 1
 
 ls = light_status()
 
@@ -35,10 +36,15 @@ def light_1(sleeptime, *args):
     print("light 1 on")
     led.on()
 
-    lights[0].on = True
-    lights[0].brightness = 200
-    lights[0].xy = [random.random(), random.random()]
-    sleep(5)
+    while(1):
+
+        lights[5].on = True
+        lights[5].brightness = 127
+        lights[5].xy = [0.139, 0.031]
+        sleep(5)
+        lights[5].xy = [0.245, 0.1214]
+        lights[5].brightness = 250
+        sleep(5)
 
     for light in lights:
         light.on = False
@@ -52,10 +58,13 @@ def light_2(sleeptime, *args):
     print("light 2 on")
     led.on()
 
-    lights[1].on = True
-    lights[1].brightness = 200
-    lights[1].xy = [random.random(), random.random()]
-    sleep(5)
+    while(1):
+        lights[0].on = True
+        lights[0].brightness = 127
+        lights[0].xy = [random.random(), random.random()]
+        sleep(5)
+        lights[0].xy = [0.1905,0.1945]
+        sleep(5)
 
     for light in lights:
         light.on = False
@@ -65,6 +74,24 @@ def light_2(sleeptime, *args):
     ls.light2_status = 0
 
 
+def light_3(sleeptime, *args):
+    print("light 3 on")
+    led.on()
+
+    while(1):
+        lights[4].on = True
+        lights[4].brightness = 127
+        lights[4].xy = [random.random(), random.random()]
+        sleep(5)
+        lights[4].xy = [0.17,0.3403]
+        sleep(5)
+
+    for light in lights:
+        light.on = False
+
+    led.off()
+    print("light 3 off")
+    ls.light2_status = 0
 
 
 def open_light1():
