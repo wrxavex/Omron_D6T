@@ -292,7 +292,7 @@ def lightSet2Active():
 while(1):
     print('running')
     sleep(1)
-    print('L1' + ls.light1_status)
-    print('L2' + ls.light2_status)
-    print('L3' + ls.light3_status)
+    print('L1' + str(ls.light1_status))
+    print('L2' + str(ls.light2_status))
+    print('L3' + str(ls.light3_status))
     pass
