@@ -218,7 +218,7 @@ def light_14(sleeptime, *args):
         print("light 14 active")
 
 
-def light_145(sleeptime, *args):
+def light_15(sleeptime, *args):
 
     lights[14].on = True
     lights[14].saturation = 254
