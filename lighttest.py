@@ -21,18 +21,18 @@ class light_status():
 
     def __init__(self):
 
-        self.light1_status = 0
-        self.light2_status = 0
-        self.light3_status = 0
-        self.light4_status = 0
-        self.light5_status = 0
-        self.light6_status = 0
+        self.light9_status = 0
+        self.light10_status = 0
+        self.light11_status = 0
+        self.light12_status = 0
+        self.light13_status = 0
+        self.light14_status = 0
 
 ls = light_status()
 
 
-def light_1(sleeptime, *args):
-    print("light 1 on")
+def light_9(sleeptime, *args):
+    print("light 9 on")
     lights[0].on = True
 
     while(1):
@@ -54,29 +54,28 @@ def light_1(sleeptime, *args):
         else:
             sleep(1)
 
-        print("light 1 active")
+        print("light 9 active")
 
         if ls.light1_status > 1:
             ls.light1_status -= 1
 
 
-
-def light_2(sleeptime, *args):
+def light_10(sleeptime, *args):
 
     lights[9].on = True
-    print("light 2 on")
+    print("light 10 on")
 
     while(1):
 
         lights[9].brightness = 32
-        lights[9].hue = 23000
+        lights[9].hue = 20000
         if ls.light1_status > 10:
             sleep(5)
         elif ls.light1_status > 5:
             sleep(2)
         else:
             sleep(1)
-            lights[9].hue = 53000
+            lights[9].hue = 50000
         lights[9].brightness = 250
         if ls.light1_status > 10:
             sleep(5)
@@ -88,26 +87,25 @@ def light_2(sleeptime, *args):
         if ls.light1_status > 1:
             ls.light1_status -= 1
 
-        print("light 2 active")
+        print("light 10 active")
 
 
-
-def light_3(sleeptime, *args):
+def light_11(sleeptime, *args):
 
     lights[10].on = True
-    print("light 3 on")
+    print("light 11 on")
 
     while(1):
 
         lights[10].brightness = 32
-        lights[10].hue = 26000
+        lights[10].hue = 20000
         if ls.light1_status > 10:
             sleep(5)
         elif ls.light1_status > 5:
             sleep(2)
         else:
             sleep(1)
-        lights[10].hue = 56000
+        lights[10].hue = 50000
         lights[10].brightness = 250
         if ls.light1_status > 10:
             sleep(5)
@@ -119,151 +117,136 @@ def light_3(sleeptime, *args):
         if ls.light1_status > 1:
             ls.light1_status -= 1
 
-        print("light 3 active")
+        print("light 11 active")
 
 
-
-def light_4(sleeptime, *args):
-    print("light 4 on")
+def light_12(sleeptime, *args):
+    lights[11].on = True
+    print("light 12 on")
 
     while(1):
-        lights[11].on = True
+
         lights[11].brightness = 32
-        lights[11].xy = [0.139, 0.031]
+        lights[11].hue = 20000
         if ls.light2_status > 10:
-            sleep(random.random() * 2)
+            sleep(5)
         elif ls.light2_status > 5:
-            sleep(random.random() * 5)
+            sleep(2)
         else:
             sleep(random.random() * 20)
-        lights[11].xy = [0.245, 0.1214]
+        lights[11].hue = 50000
         lights[11].brightness = 250
         if ls.light2_status > 10:
-            sleep(random.random() * 2)
+            sleep(5)
         elif ls.light2_status > 5:
-            sleep(random.random() * 5)
+            sleep(2)
         else:
-            sleep(random.random() * 20)
+            sleep(1)
 
-        if ls.light2_status > 0:
+        if ls.light2_status > 1:
             ls.light2_status -= 1
 
-        print("light 4 active")
-
-    for light in lights:
-        light.on = False
-
-    print("light 4 off")
-    ls.light2_status = 0
+        print("light 12 active")
 
 
-def light_5(sleeptime, *args):
-    print("light 5 on")
+def light_13(sleeptime, *args):
+    lights[12].on = True
+    print("light 13 on")
 
     while(1):
-        lights[12].on = True
+
         lights[12].brightness = 32
-        lights[12].xy = [0.139, 0.031]
+        lights[12].hue = 20000
         if ls.light2_status > 10:
-            sleep(random.random() * 2)
+            sleep(5)
         elif ls.light2_status > 5:
-            sleep(random.random() * 5)
+            sleep(2)
         else:
             sleep(random.random() * 20)
-        lights[12].xy = [0.245, 0.1214]
+        lights[12].hue = 50000
         lights[12].brightness = 250
         if ls.light2_status > 10:
-            sleep(random.random() * 2)
+            sleep(5)
         elif ls.light2_status > 5:
-            sleep(random.random() * 5)
+            sleep(2)
         else:
-            sleep(random.random() * 20)
+            sleep(1)
 
-        if ls.light2_status > 0:
+        if ls.light2_status > 1:
             ls.light2_status -= 1
 
-        print("light 5 active")
-
-    for light in lights:
-        light.on = False
-
-    print("light 5 off")
-    ls.light2_status = 0
+        print("light 13 active")
 
 
-def light_6(sleeptime, *args):
-    print("light 5 on")
+def light_14(sleeptime, *args):
 
+    lights[13].on = True
+    print("light 14 on")
     while(1):
-        lights[13].on = True
+
         lights[13].brightness = 127
-        lights[13].xy = [0.139, 0.031]
+        lights[13].hue = 20000
         if ls.light2_status > 10:
-            sleep(random.random() * 2)
+            sleep(5)
         elif ls.light2_status > 5:
-            sleep(random.random() * 5)
+            sleep(2)
         else:
-            sleep(random.random() * 20)
-        lights[13].xy = [0.245, 0.1214]
+            sleep(1)
+        lights[13].hue = 50000
         lights[13].brightness = 250
         if ls.light2_status > 10:
-            sleep(random.random() * 2)
+            sleep(5)
         elif ls.light2_status > 5:
-            sleep(random.random() * 5)
+            sleep(2)
         else:
-            sleep(random.random() * 20)
+            sleep(1)
 
-        if ls.light2_status > 0:
+        if ls.light2_status > 1:
             ls.light2_status -= 1
 
-    for light in lights:
-        light.on = False
 
-    print("light 5 off")
-    ls.light2_status = 0
-
-
-def open_light1():
+def open_light9():
     if ls.light1_status == 0:
         ls.light1_status = 0
-        thread.start_new_thread(light_1, (1, ""))
+        thread.start_new_thread(light_9, (1, ""))
 
-def open_light2():
+
+def open_light10():
     if ls.light2_status == 0:
         ls.light2_status = 1
-        thread.start_new_thread(light_2, (1, ""))
+        thread.start_new_thread(light_10, (1, ""))
 
 
-def open_light3():
+def open_light11():
     if ls.light3_status == 0:
         ls.light3_status = 1
-        thread.start_new_thread(light_3, (1, ""))
+        thread.start_new_thread(light_11, (1, ""))
 
 
-def open_light4():
+def open_light12():
     if ls.light4_status == 0:
         ls.light4_status = 1
-        thread.start_new_thread(light_4, (1, ""))
+        thread.start_new_thread(light_12, (1, ""))
 
 
-def open_light5():
+def open_light13():
     if ls.light5_status == 0:
         ls.light5_status = 1
-        thread.start_new_thread(light_5, (1, ""))
+        thread.start_new_thread(light_13, (1, ""))
 
 
-def open_light6():
+def open_light14():
     if ls.light6_status == 0:
         ls.light6_status = 1
-        thread.start_new_thread(light_6, (1, ""))
+        thread.start_new_thread(light_14, (1, ""))
 
 
-open_light1()
-open_light2()
-open_light3()
-open_light4()
-open_light5()
-open_light6()
+open_light9()
+open_light10()
+open_light11()
+open_light12()
+open_light13()
+open_light14()
 
 
 def lightSet1Active():
