@@ -37,14 +37,14 @@ def light_1(sleeptime, *args):
 
     while(1):
 
-        lights[0].brightness = 30
-        lights[0].hue = 20000
+        lights[8].brightness = 30
+        lights[8].hue = 20000
         if ls.light1_status > 10:
             sleep(5);
         elif ls.light1_status > 5:
             sleep(2)
-        lights[0].hue = 50000
-        lights[0].brightness = 250
+        lights[8].hue = 50000
+        lights[8].brightness = 250
         if ls.light1_status > 10:
             sleep(5)
         elif ls.light1_status > 5:
@@ -69,17 +69,17 @@ def light_2(sleeptime, *args):
     print("light 2 on")
 
     while(1):
-        lights[1].on = True
-        lights[1].brightness = 32
-        lights[1].xy = [0.139, 0.031]
+        lights[9].on = True
+        lights[9].brightness = 32
+        lights[9].xy = [0.139, 0.031]
         if ls.light1_status > 10:
             sleep(random.random()*2)
         elif ls.light1_status > 5:
             sleep(random.random()*5)
         else:
             sleep(random.random() * 20)
-        lights[1].xy = [0.245, 0.1214]
-        lights[1].brightness = 250
+        lights[9].xy = [0.245, 0.1214]
+        lights[9].brightness = 250
         if ls.light1_status > 10:
             sleep(random.random()*2)
         elif ls.light1_status > 5:
@@ -105,17 +105,17 @@ def light_3(sleeptime, *args):
     print("light 3 on")
 
     while(1):
-        lights[2].on = True
-        lights[2].brightness = 32
-        lights[2].xy = [0.139, 0.031]
+        lights[10].on = True
+        lights[10].brightness = 32
+        lights[10].xy = [0.139, 0.031]
         if ls.light1_status > 10:
             sleep(random.random() * 2)
         elif ls.light1_status > 5:
             sleep(random.random() * 5)
         else:
             sleep(random.random() * 20)
-        lights[2].xy = [0.245, 0.1214]
-        lights[2].brightness = 250
+        lights[10].xy = [0.245, 0.1214]
+        lights[10].brightness = 250
         if ls.light1_status > 10:
             sleep(random.random() * 5)
         elif ls.light1_status > 5:
@@ -139,17 +139,17 @@ def light_4(sleeptime, *args):
     print("light 4 on")
 
     while(1):
-        lights[3].on = True
-        lights[3].brightness = 32
-        lights[3].xy = [0.139, 0.031]
+        lights[11].on = True
+        lights[11].brightness = 32
+        lights[11].xy = [0.139, 0.031]
         if ls.light2_status > 10:
             sleep(random.random() * 2)
         elif ls.light2_status > 5:
             sleep(random.random() * 5)
         else:
             sleep(random.random() * 20)
-        lights[3].xy = [0.245, 0.1214]
-        lights[3].brightness = 250
+        lights[11].xy = [0.245, 0.1214]
+        lights[11].brightness = 250
         if ls.light2_status > 10:
             sleep(random.random() * 2)
         elif ls.light2_status > 5:
@@ -173,17 +173,17 @@ def light_5(sleeptime, *args):
     print("light 5 on")
 
     while(1):
-        lights[4].on = True
-        lights[4].brightness = 32
-        lights[4].xy = [0.139, 0.031]
+        lights[12].on = True
+        lights[12].brightness = 32
+        lights[12].xy = [0.139, 0.031]
         if ls.light2_status > 10:
             sleep(random.random() * 2)
         elif ls.light2_status > 5:
             sleep(random.random() * 5)
         else:
             sleep(random.random() * 20)
-        lights[4].xy = [0.245, 0.1214]
-        lights[4].brightness = 250
+        lights[12].xy = [0.245, 0.1214]
+        lights[12].brightness = 250
         if ls.light2_status > 10:
             sleep(random.random() * 2)
         elif ls.light2_status > 5:
@@ -207,17 +207,17 @@ def light_6(sleeptime, *args):
     print("light 5 on")
 
     while(1):
-        lights[5].on = True
-        lights[5].brightness = 127
-        lights[5].xy = [0.139, 0.031]
+        lights[13].on = True
+        lights[13].brightness = 127
+        lights[13].xy = [0.139, 0.031]
         if ls.light2_status > 10:
             sleep(random.random() * 2)
         elif ls.light2_status > 5:
             sleep(random.random() * 5)
         else:
             sleep(random.random() * 20)
-        lights[5].xy = [0.245, 0.1214]
-        lights[5].brightness = 250
+        lights[13].xy = [0.245, 0.1214]
+        lights[13].brightness = 250
         if ls.light2_status > 10:
             sleep(random.random() * 2)
         elif ls.light2_status > 5:
