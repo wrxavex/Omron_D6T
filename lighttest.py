@@ -50,7 +50,7 @@ def light_9(sleeptime, *args):
             sleep(2)
         else:
             sleep(1)
-        lights[8].hue = 50000
+        lights[8].hue = 45000
         lights[8].brightness = 250
         if ls.sensor1 > 10:
             sleep(5)
@@ -81,7 +81,7 @@ def light_10(sleeptime, *args):
             sleep(2)
         else:
             sleep(1)
-            lights[9].hue = 50000
+            lights[9].hue = 45000
         lights[9].brightness = 250
         if ls.sensor1 > 10:
             sleep(5)
@@ -112,7 +112,7 @@ def light_11(sleeptime, *args):
             sleep(2)
         else:
             sleep(1)
-        lights[10].hue = 50000
+        lights[10].hue = 45000
         lights[10].brightness = 250
         if ls.sensor2 > 10:
             sleep(5)
@@ -143,7 +143,7 @@ def light_12(sleeptime, *args):
         else:
             sleep(1)
 
-        lights[11].hue = 40000
+        lights[11].hue = 45000
         lights[11].brightness = 250
         if ls.sensor2 > 10:
             sleep(5)
@@ -173,7 +173,7 @@ def light_13(sleeptime, *args):
             sleep(2)
         else:
             sleep(1)
-        lights[12].hue = 40000
+        lights[12].hue = 45000
         lights[12].brightness = 250
         if ls.sensor2 > 10:
             sleep(5)
@@ -203,7 +203,7 @@ def light_14(sleeptime, *args):
             sleep(2)
         else:
             sleep(1)
-        lights[13].hue = 40000
+        lights[13].hue = 45000
         lights[13].brightness = 250
         if ls.sensor2 > 10:
             sleep(5)
@@ -233,7 +233,7 @@ def light_15(sleeptime, *args):
             sleep(2)
         else:
             sleep(1)
-        lights[14].hue = 40000
+        lights[14].hue = 45000
         lights[14].brightness = 250
         if ls.sensor2 > 10:
             sleep(5)
