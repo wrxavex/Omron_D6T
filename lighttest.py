@@ -209,38 +209,38 @@ def light_14(sleeptime, *args):
 
 
 def open_light9():
-    if ls.light1_status == 0:
-        ls.light1_status = 0
+    if ls.light9_status == 0:
+        ls.light9_status = 1
         thread.start_new_thread(light_9, (1, ""))
 
 
 def open_light10():
-    if ls.light2_status == 0:
-        ls.light2_status = 1
+    if ls.light10_status == 0:
+        ls.light10_status = 1
         thread.start_new_thread(light_10, (1, ""))
 
 
 def open_light11():
-    if ls.light3_status == 0:
-        ls.light3_status = 1
+    if ls.light11_status == 0:
+        ls.light11_status = 1
         thread.start_new_thread(light_11, (1, ""))
 
 
 def open_light12():
-    if ls.light4_status == 0:
-        ls.light4_status = 1
+    if ls.light12_status == 0:
+        ls.light12_status = 1
         thread.start_new_thread(light_12, (1, ""))
 
 
 def open_light13():
-    if ls.light5_status == 0:
-        ls.light5_status = 1
+    if ls.light13_status == 0:
+        ls.light13_status = 1
         thread.start_new_thread(light_13, (1, ""))
 
 
 def open_light14():
-    if ls.light6_status == 0:
-        ls.light6_status = 1
+    if ls.light14_status == 0:
+        ls.light14_status = 1
         thread.start_new_thread(light_14, (1, ""))
 
 
