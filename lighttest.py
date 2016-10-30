@@ -56,85 +56,71 @@ def light_1(sleeptime, *args):
 
         print("light 1 active")
 
-        if ls.light1_status > 0:
+        if ls.light1_status > 1:
             ls.light1_status -= 1
 
 
-    for light in lights:
-        light.on = False
-
-    print("light 1 off")
-    ls.light1_status = 0
-
 
 def light_2(sleeptime, *args):
+
+    lights[9].on = True
     print("light 2 on")
 
     while(1):
-        lights[9].on = True
+
         lights[9].brightness = 32
-        lights[9].xy = [0.139, 0.031]
+        lights[9].hue = 23000
         if ls.light1_status > 10:
-            sleep(random.random()*2)
+            sleep(5)
         elif ls.light1_status > 5:
-            sleep(random.random()*5)
+            sleep(2)
         else:
-            sleep(random.random() * 20)
-        lights[9].xy = [0.245, 0.1214]
+            sleep(1)
+            lights[9].hue = 53000
         lights[9].brightness = 250
         if ls.light1_status > 10:
-            sleep(random.random()*2)
+            sleep(5)
         elif ls.light1_status > 5:
-            sleep(random.random()*5)
+            sleep(2)
         else:
-            sleep(random.random() * 20)
+            sleep(1)
 
-        if ls.light1_status > 0:
+        if ls.light1_status > 1:
             ls.light1_status -= 1
 
         print("light 2 active")
 
-    for light in lights:
-        light.on = False
-
-
-
-    print("light 2 off")
-    ls.light2_status = 0
 
 
 def light_3(sleeptime, *args):
+
+    lights[10].on = True
     print("light 3 on")
 
     while(1):
-        lights[10].on = True
+
         lights[10].brightness = 32
-        lights[10].xy = [0.139, 0.031]
+        lights[10].hue = 26000
         if ls.light1_status > 10:
-            sleep(random.random() * 2)
+            sleep(5)
         elif ls.light1_status > 5:
-            sleep(random.random() * 5)
+            sleep(2)
         else:
-            sleep(random.random() * 20)
-        lights[10].xy = [0.245, 0.1214]
+            sleep(1)
+        lights[10].hue = 56000
         lights[10].brightness = 250
         if ls.light1_status > 10:
-            sleep(random.random() * 5)
+            sleep(5)
         elif ls.light1_status > 5:
-            sleep(random.random() * 3)
+            sleep(2)
         else:
-            sleep(random.random() * 2)
+            sleep(1)
 
-        if ls.light1_status > 0:
+        if ls.light1_status > 1:
             ls.light1_status -= 1
 
         print("light 3 active")
 
-    for light in lights:
-        light.on = False
-
-    print("light 3 off")
-    ls.light1_status = 0
 
 
 def light_4(sleeptime, *args):
@@ -292,7 +278,7 @@ def lightSet2Active():
 while(1):
     print('running')
     sleep(1)
-    print('L1' + str(ls.light1_status))
-    print('L2' + str(ls.light2_status))
-    print('L3' + str(ls.light3_status))
+    print('L1: ' + str(ls.light1_status))
+    print('L2: ' + str(ls.light2_status))
+    print('L3: ' + str(ls.light3_status))
     pass
