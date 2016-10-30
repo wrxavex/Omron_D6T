@@ -1,4 +1,3 @@
-from gpiozero import LED, Button
 from signal import pause
 from time import sleep
 import random
@@ -16,9 +15,6 @@ b = Bridge('192.168.1.178', 'YxPYRWNawywC-sKHkjuRho7iOwMMSrn3di2ETF74')  # Enter
 
 lights = b.get_light_objects()
 
-led = LED(27)
-button1 = Button(17, pull_up=False)
-button2 = Button(18, pull_up=False)
 
 
 class light_status():
@@ -303,7 +299,3 @@ def lightSet2Active():
     ls.light2_status +=50
     print('pir2 active')
 
-button1.when_pressed = lightSet1Active
-button2.when_pressed = lightSet2Active
-
-pause()
