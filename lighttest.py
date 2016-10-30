@@ -262,6 +262,6 @@ def lightSet2Active():
     print('pir2 active')
 
 while(1):
-    print('LS: ' + str(ls.light9_status) + ', ' + str(ls.light10_status) + ', ' + str(ls.light11_status)+', ' + str(ls.light11_status) + ', ' + str.(ls.light12_status))
+    print('LS: ' + str(ls.light9_status) + ', ' + str(ls.light10_status) + ', ' + str(ls.light11_status)+', ' + str(ls.light11_status) + ', ' + str(ls.light12_status))
     print('Sensor: ' + str(ls.sensor1) + ', ' + str(ls.sensor2) + ', ' + str(ls.sensor3))
     sleep(1)
