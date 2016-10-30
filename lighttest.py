@@ -43,6 +43,8 @@ def light_1(sleeptime, *args):
             sleep(5);
         elif ls.light1_status > 5:
             sleep(2)
+        else
+            sleep(1)
         lights[8].hue = 50000
         lights[8].brightness = 250
         if ls.light1_status > 10:
