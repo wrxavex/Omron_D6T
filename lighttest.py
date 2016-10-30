@@ -220,7 +220,7 @@ def light_14(sleeptime, *args):
 
 def light_15(sleeptime, *args):
 
-    # lights[14].on = True
+    lights[14].on = True
     lights[14].saturation = 254
     print("light 15 on")
     while(1):
@@ -291,11 +291,17 @@ def open_light15():
 
 
 open_light9()
+sleep(0.2)
 open_light10()
+sleep(0.2)
 open_light11()
+sleep(0.2)
 open_light12()
+sleep(0.2)
 open_light13()
+sleep(0.2)
 open_light14()
+sleep(0.2)
 open_light15()
 
 
