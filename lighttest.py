@@ -117,7 +117,7 @@ def light_11(sleeptime, *args):
         else:
             sleep(1)
 
-        if ls.sensor1 > 1:
+        if ls.sensor2 > 1:
             ls.sensor2 -= 1
 
         print("light 11 active")
@@ -136,7 +136,8 @@ def light_12(sleeptime, *args):
         elif ls.sensor2 > 5:
             sleep(2)
         else:
-            sleep(random.random() * 20)
+            sleep(1)
+
         lights[11].hue = 50000
         lights[11].brightness = 250
         if ls.sensor2 > 10:
@@ -165,7 +166,7 @@ def light_13(sleeptime, *args):
         elif ls.sensor2 > 5:
             sleep(2)
         else:
-            sleep(random.random() * 20)
+            sleep(1)
         lights[12].hue = 50000
         lights[12].brightness = 250
         if ls.sensor2 > 10:
@@ -206,6 +207,8 @@ def light_14(sleeptime, *args):
 
         if ls.sensor2 > 1:
             ls.sensor2 -= 1
+
+        print("light 14 active")
 
 
 def open_light9():
@@ -262,6 +265,6 @@ def lightSet2Active():
     print('pir2 active')
 
 while(1):
-    print('LS: ' + str(ls.light9_status) + ', ' + str(ls.light10_status) + ', ' + str(ls.light11_status)+', ' + str(ls.light11_status) + ', ' + str(ls.light12_status))
+    print('LS: ' + str(ls.light9_status) + ', ' + str(ls.light10_status) + ', ' + str(ls.light11_status)+', ' + str(ls.light11_status) + ', ' + str(ls.light12_status)+ ', ' + str(ls.light13_status)+ ', ' + str(ls.light14_status))
     print('Sensor: ' + str(ls.sensor1) + ', ' + str(ls.sensor2) + ', ' + str(ls.sensor3))
     sleep(1)
