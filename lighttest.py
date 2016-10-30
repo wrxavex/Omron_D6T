@@ -30,6 +30,7 @@ class light_status():
         self.light12_status = 0
         self.light13_status = 0
         self.light14_status = 0
+        self.light15_status = 0
 
 ls = light_status()
 
@@ -142,7 +143,7 @@ def light_12(sleeptime, *args):
         else:
             sleep(1)
 
-        lights[11].hue = 50000
+        lights[11].hue = 40000
         lights[11].brightness = 250
         if ls.sensor2 > 10:
             sleep(5)
@@ -172,7 +173,7 @@ def light_13(sleeptime, *args):
             sleep(2)
         else:
             sleep(1)
-        lights[12].hue = 50000
+        lights[12].hue = 40000
         lights[12].brightness = 250
         if ls.sensor2 > 10:
             sleep(5)
@@ -202,7 +203,7 @@ def light_14(sleeptime, *args):
             sleep(2)
         else:
             sleep(1)
-        lights[13].hue = 50000
+        lights[13].hue = 40000
         lights[13].brightness = 250
         if ls.sensor2 > 10:
             sleep(5)
@@ -215,6 +216,36 @@ def light_14(sleeptime, *args):
             ls.sensor2 -= 1
 
         print("light 14 active")
+
+
+def light_145(sleeptime, *args):
+
+    lights[14].on = True
+    lights[14].saturation = 254
+    print("light 15 on")
+    while(1):
+
+        lights[14].brightness = 32
+        lights[14].hue = 20000
+        if ls.sensor2 > 10:
+            sleep(5)
+        elif ls.sensor2 > 5:
+            sleep(2)
+        else:
+            sleep(1)
+        lights[14].hue = 40000
+        lights[14].brightness = 250
+        if ls.sensor2 > 10:
+            sleep(5)
+        elif ls.sensor2 > 5:
+            sleep(2)
+        else:
+            sleep(1)
+
+        if ls.sensor2 > 1:
+            ls.sensor2 -= 1
+
+        print("light 15 active")
 
 
 def open_light9():
@@ -253,12 +284,19 @@ def open_light14():
         thread.start_new_thread(light_14, (1, ""))
 
 
+def open_light15():
+    if ls.light15_status == 0:
+        ls.light15_status = 1
+        thread.start_new_thread(light_15, (1, ""))
+
+
 open_light9()
 open_light10()
 open_light11()
 open_light12()
 open_light13()
 open_light14()
+open_light15()
 
 
 def lightSet1Active():
@@ -271,6 +309,6 @@ def lightSet2Active():
     print('pir2 active')
 
 while(1):
-    print('LS: ' + str(ls.light9_status) + ', ' + str(ls.light10_status) + ', ' + str(ls.light11_status)+', ' + str(ls.light11_status) + ', ' + str(ls.light12_status)+ ', ' + str(ls.light13_status)+ ', ' + str(ls.light14_status))
+    print('LS: ' + str(ls.light9_status) + ', ' + str(ls.light10_status) + ', ' + str(ls.light11_status)+', ' + str(ls.light11_status) + ', ' + str(ls.light12_status)+ ', ' + str(ls.light13_status) + ', ' + str(ls.light14_status) + ', ' + str(ls.light15_status))
     print('Sensor: ' + str(ls.sensor1) + ', ' + str(ls.sensor2) + ', ' + str(ls.sensor3))
     sleep(1)
