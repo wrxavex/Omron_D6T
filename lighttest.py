@@ -33,7 +33,6 @@ ls = light_status()
 
 def light_1(sleeptime, *args):
     print("light 1 on")
-    led.on()
 
     while(1):
 
@@ -62,14 +61,12 @@ def light_1(sleeptime, *args):
     for light in lights:
         light.on = False
 
-    led.off()
     print("light 1 off")
     ls.light1_status = 0
 
 
 def light_2(sleeptime, *args):
     print("light 2 on")
-    led.on()
 
     while(1):
         lights[1].on = True
@@ -100,14 +97,12 @@ def light_2(sleeptime, *args):
 
 
 
-    led.off()
     print("light 2 off")
     ls.light2_status = 0
 
 
 def light_3(sleeptime, *args):
     print("light 3 on")
-    led.on()
 
     while(1):
         lights[2].on = True
@@ -136,14 +131,12 @@ def light_3(sleeptime, *args):
     for light in lights:
         light.on = False
 
-    led.off()
     print("light 3 off")
     ls.light1_status = 0
 
 
 def light_4(sleeptime, *args):
     print("light 4 on")
-    led.on()
 
     while(1):
         lights[3].on = True
@@ -172,14 +165,12 @@ def light_4(sleeptime, *args):
     for light in lights:
         light.on = False
 
-    led.off()
     print("light 4 off")
     ls.light2_status = 0
 
 
 def light_5(sleeptime, *args):
     print("light 5 on")
-    led.on()
 
     while(1):
         lights[4].on = True
@@ -208,14 +199,12 @@ def light_5(sleeptime, *args):
     for light in lights:
         light.on = False
 
-    led.off()
     print("light 5 off")
     ls.light2_status = 0
 
 
 def light_6(sleeptime, *args):
     print("light 5 on")
-    led.on()
 
     while(1):
         lights[5].on = True
@@ -242,7 +231,6 @@ def light_6(sleeptime, *args):
     for light in lights:
         light.on = False
 
-    led.off()
     print("light 5 off")
     ls.light2_status = 0
 
