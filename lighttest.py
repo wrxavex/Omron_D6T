@@ -291,17 +291,17 @@ def open_light15():
 
 
 open_light9()
-sleep(0.2)
+sleep(0.3)
 open_light10()
-sleep(0.2)
+sleep(0.3)
 open_light11()
-sleep(0.2)
+sleep(0.3)
 open_light12()
-sleep(0.2)
+sleep(0.3)
 open_light13()
-sleep(0.2)
+sleep(0.3)
 open_light14()
-sleep(0.2)
+sleep(0.3)
 open_light15()
 
 
