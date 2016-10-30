@@ -36,7 +36,8 @@ ls = light_status()
 
 def light_9(sleeptime, *args):
     print("light 9 on")
-    lights[0].on = True
+    lights[8].on = True
+    lights[8].saturation = 254
 
     while(1):
 
@@ -66,6 +67,7 @@ def light_9(sleeptime, *args):
 def light_10(sleeptime, *args):
 
     lights[9].on = True
+    lights[9].saturation = 254
     print("light 10 on")
 
     while(1):
@@ -96,6 +98,7 @@ def light_10(sleeptime, *args):
 def light_11(sleeptime, *args):
 
     lights[10].on = True
+    lights[10].saturation = 254
     print("light 11 on")
 
     while(1):
@@ -125,6 +128,7 @@ def light_11(sleeptime, *args):
 
 def light_12(sleeptime, *args):
     lights[11].on = True
+    lights[11].saturation = 254
     print("light 12 on")
 
     while(1):
@@ -155,6 +159,7 @@ def light_12(sleeptime, *args):
 
 def light_13(sleeptime, *args):
     lights[12].on = True
+    lights[12].saturation = 254
     print("light 13 on")
 
     while(1):
@@ -185,10 +190,11 @@ def light_13(sleeptime, *args):
 def light_14(sleeptime, *args):
 
     lights[13].on = True
+    lights[13].saturation = 254
     print("light 14 on")
     while(1):
 
-        lights[13].brightness = 127
+        lights[13].brightness = 32
         lights[13].hue = 20000
         if ls.sensor2 > 10:
             sleep(5)
