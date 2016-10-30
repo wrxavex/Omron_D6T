@@ -287,3 +287,6 @@ def lightSet2Active():
     ls.light2_status +=50
     print('pir2 active')
 
+while(1):
+    print('running')
+    pass
