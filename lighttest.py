@@ -21,6 +21,9 @@ class light_status():
 
     def __init__(self):
 
+        self.sensor1 = 0
+        self.sensor2 = 0
+        self.sensor3 = 0
         self.light9_status = 0
         self.light10_status = 0
         self.light11_status = 0
@@ -39,25 +42,25 @@ def light_9(sleeptime, *args):
 
         lights[8].brightness = 30
         lights[8].hue = 20000
-        if ls.light1_status > 10:
+        if ls.sensor1 > 10:
             sleep(5);
-        elif ls.light1_status > 5:
+        elif ls.sensor1 > 5:
             sleep(2)
         else:
             sleep(1)
         lights[8].hue = 50000
         lights[8].brightness = 250
-        if ls.light1_status > 10:
+        if ls.sensor1 > 10:
             sleep(5)
-        elif ls.light1_status > 5:
+        elif ls.sensor1 > 5:
             sleep(2)
         else:
             sleep(1)
 
         print("light 9 active")
 
-        if ls.light1_status > 1:
-            ls.light1_status -= 1
+        if ls.sensor1 > 1:
+            ls.sensor1 -= 1
 
 
 def light_10(sleeptime, *args):
@@ -69,23 +72,23 @@ def light_10(sleeptime, *args):
 
         lights[9].brightness = 32
         lights[9].hue = 20000
-        if ls.light1_status > 10:
+        if ls.sensor1 > 10:
             sleep(5)
-        elif ls.light1_status > 5:
+        elif ls.sensor1 > 5:
             sleep(2)
         else:
             sleep(1)
             lights[9].hue = 50000
         lights[9].brightness = 250
-        if ls.light1_status > 10:
+        if ls.sensor1 > 10:
             sleep(5)
-        elif ls.light1_status > 5:
+        elif ls.sensor1 > 5:
             sleep(2)
         else:
             sleep(1)
 
-        if ls.light1_status > 1:
-            ls.light1_status -= 1
+        if ls.sensor1 > 1:
+            ls.sensor1 -= 1
 
         print("light 10 active")
 
@@ -99,23 +102,23 @@ def light_11(sleeptime, *args):
 
         lights[10].brightness = 32
         lights[10].hue = 20000
-        if ls.light1_status > 10:
+        if ls.sensor2 > 10:
             sleep(5)
-        elif ls.light1_status > 5:
+        elif ls.sensor2 > 5:
             sleep(2)
         else:
             sleep(1)
         lights[10].hue = 50000
         lights[10].brightness = 250
-        if ls.light1_status > 10:
+        if ls.sensor2 > 10:
             sleep(5)
-        elif ls.light1_status > 5:
+        elif ls.sensor2 > 5:
             sleep(2)
         else:
             sleep(1)
 
-        if ls.light1_status > 1:
-            ls.light1_status -= 1
+        if ls.sensor1 > 1:
+            ls.sensor2 -= 1
 
         print("light 11 active")
 
@@ -128,23 +131,23 @@ def light_12(sleeptime, *args):
 
         lights[11].brightness = 32
         lights[11].hue = 20000
-        if ls.light2_status > 10:
+        if ls.sensor2 > 10:
             sleep(5)
-        elif ls.light2_status > 5:
+        elif ls.sensor2 > 5:
             sleep(2)
         else:
             sleep(random.random() * 20)
         lights[11].hue = 50000
         lights[11].brightness = 250
-        if ls.light2_status > 10:
+        if ls.sensor2 > 10:
             sleep(5)
-        elif ls.light2_status > 5:
+        elif ls.sensor2 > 5:
             sleep(2)
         else:
             sleep(1)
 
-        if ls.light2_status > 1:
-            ls.light2_status -= 1
+        if ls.sensor2 > 1:
+            ls.sensor2 -= 1
 
         print("light 12 active")
 
@@ -157,23 +160,23 @@ def light_13(sleeptime, *args):
 
         lights[12].brightness = 32
         lights[12].hue = 20000
-        if ls.light2_status > 10:
+        if ls.sensor2 > 10:
             sleep(5)
-        elif ls.light2_status > 5:
+        elif ls.sensor2 > 5:
             sleep(2)
         else:
             sleep(random.random() * 20)
         lights[12].hue = 50000
         lights[12].brightness = 250
-        if ls.light2_status > 10:
+        if ls.sensor2 > 10:
             sleep(5)
-        elif ls.light2_status > 5:
+        elif ls.sensor2 > 5:
             sleep(2)
         else:
             sleep(1)
 
-        if ls.light2_status > 1:
-            ls.light2_status -= 1
+        if ls.sensor2 > 1:
+            ls.sensor2 -= 1
 
         print("light 13 active")
 
@@ -186,23 +189,23 @@ def light_14(sleeptime, *args):
 
         lights[13].brightness = 127
         lights[13].hue = 20000
-        if ls.light2_status > 10:
+        if ls.sensor2 > 10:
             sleep(5)
-        elif ls.light2_status > 5:
+        elif ls.sensor2 > 5:
             sleep(2)
         else:
             sleep(1)
         lights[13].hue = 50000
         lights[13].brightness = 250
-        if ls.light2_status > 10:
+        if ls.sensor2 > 10:
             sleep(5)
-        elif ls.light2_status > 5:
+        elif ls.sensor2 > 5:
             sleep(2)
         else:
             sleep(1)
 
-        if ls.light2_status > 1:
-            ls.light2_status -= 1
+        if ls.sensor2 > 1:
+            ls.sensor2 -= 1
 
 
 def open_light9():
@@ -250,18 +253,18 @@ open_light14()
 
 
 def lightSet1Active():
-    ls.light1_status +=50
+    ls.sensor1 +=50
     print('pir1 active')
 
 
 def lightSet2Active():
-    ls.light2_status +=50
+    ls.sensor2 +=50
     print('pir2 active')
 
 while(1):
     print('running')
     sleep(1)
-    print('L1: ' + str(ls.light1_status))
-    print('L2: ' + str(ls.light2_status))
-    print('L3: ' + str(ls.light3_status))
+    print('L1: ' + str(ls.light9_status))
+    print('L2: ' + str(ls.light10_status))
+    print('L3: ' + str(ls.light11_status))
     pass
