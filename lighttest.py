@@ -43,7 +43,7 @@ def light_1(sleeptime, *args):
             sleep(5);
         elif ls.light1_status > 5:
             sleep(2)
-        else
+        else:
             sleep(1)
         lights[8].hue = 50000
         lights[8].brightness = 250
@@ -291,4 +291,8 @@ def lightSet2Active():
 
 while(1):
     print('running')
+    sleep(1)
+    print('L1' + ls.light1_status)
+    print('L2' + ls.light2_status)
+    print('L3' + ls.light3_status)
     pass
