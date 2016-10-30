@@ -45,7 +45,7 @@ def light_9(sleeptime, *args):
         lights[8].brightness = 30
         lights[8].hue = 20000
         if ls.sensor1 > 10:
-            sleep(5);
+            sleep(5)
         elif ls.sensor1 > 5:
             sleep(2)
         else:
