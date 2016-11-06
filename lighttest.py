@@ -326,7 +326,7 @@ def mot1():
     led1.on()
     lights[6].on = True
     lights[6].brightness = 127
-    sleep(2)
+    sleep(30)
     lights[6].on = False
     led1.off()
 
@@ -336,7 +336,7 @@ def mot2():
     led2.on()
     lights[7].on = True
     lights[7].brightness = 127
-    sleep(2)
+    sleep(30)
     lights[7].on = False
     led2.off()
 
