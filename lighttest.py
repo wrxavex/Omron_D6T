@@ -322,6 +322,7 @@ lights = b.get_light_objects()
 #     ls.sensor2 +=50
 #     print('pir2 active')
 
+
 def mot1():
     print('motion sensor1')
     # led1.on()
