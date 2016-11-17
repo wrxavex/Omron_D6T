@@ -5,9 +5,10 @@ from time import sleep
 import random
 
 pir1 = MotionSensor(17)
-pir2 = MotionSensor(18)
-led1 = LED(27)
-led2 = LED(22)
+pir2 = MotionSensor(27)
+pir3 = MotionSensor(22)
+# led1 = LED(5)
+# led2 = LED(4)
 
 from phue import Bridge
 import logging
@@ -323,25 +324,35 @@ lights = b.get_light_objects()
 
 def mot1():
     print('motion sensor1')
-    led1.on()
+    # led1.on()
     lights[6].on = True
     lights[6].brightness = 127
     sleep(30)
     lights[6].on = False
-    led1.off()
+    # led1.off()
 
 
 def mot2():
     print('motion sensor2')
-    led2.on()
+    # led2.on()
     lights[7].on = True
     lights[7].brightness = 127
     sleep(30)
     lights[7].on = False
-    led2.off()
+    # led2.off()
 
+
+def mot3():
+    print('motion sensor2')
+    # led2.on()
+    lights[8].on = True
+    lights[8].brightness = 127
+    sleep(30)
+    lights[8].on = False
+    # led2.off()
 
 
 pir1.when_motion = mot1
 pir2.when_motion = mot2
+pir3.when_motion = mot3
 pause()
