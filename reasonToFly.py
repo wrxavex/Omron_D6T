@@ -146,12 +146,13 @@ while True:
 
     print('start reason to fly')
 
-    print('s.stage =' + str(s.state))
+    print('s.state =' + str(s.state))
 
     light_check()
 
     for pir in range(0, 3):
         pirs[pir].check()
+        print ('pir check')
 
     if s.state == 2:
         if time.time() - s.stage_show_time > 0.2:
@@ -173,16 +174,14 @@ while True:
 
     if s.state == 1:
         if time.time() - s.stage_show_time > 0.5:
-
             if bulbs[s.stage_count].state == 1:
                 if s.stage_next % 2 == 0:
-                    print('stage 1')
-
+                    print('%2 == 0')
                     bulbs[s.stage_count].h += 1500
-
                     bulbs[s.stage_count].b = 120
 
-                if bulbs[s.stage_count].stage == 0:
+                if s.stage_next % 2 == 1:
+                    print ('%2 == 1')
                     bulbs[s.stage_count].h += 1500
                     bulbs[s.stage_count].b = 60
 
