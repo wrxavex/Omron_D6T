@@ -147,6 +147,7 @@ pirs[0].detect()
 while True:
 
     light_check()
+    print ('L.state: 1:{0:0d} 2:{1:1d} 5:{2:2d} 6:{3:3d} 10:{4:4d} 11:{5:5d}'.format(bulbs[0].state, bulbs[1].state, bulbs[5].state, bulbs[6].state, bulbs[10].state, bulbs[11].state))
 
     for pir in range(0, 3):
         pirs[pir].check()
