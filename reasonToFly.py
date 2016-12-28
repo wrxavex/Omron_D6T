@@ -186,7 +186,7 @@ while True:
             print('time to show')
             if bulbs[s.stage_count].state == 0:
 
-
+                print('bulbs active')
 
                 if s.stage_next % 2 == 0:
                     print('%2 == 0')
