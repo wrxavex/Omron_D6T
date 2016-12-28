@@ -226,7 +226,6 @@ while True:
                     pirs[0].count = 0
 
         if pirs[1].state == 1:
-            print('pirs[1] == 1')
             if time.time() - pirs[1].show_time > 1:
                 if pirs[1].count % 2 == 0:
                     for bulb in range(5, 10):
