@@ -57,7 +57,6 @@ class LightS:
         self.power = 0
         lights[self.no] = False
 
-
 bulbs = {}
 
 for bulb in range(0, 15):
@@ -145,6 +144,7 @@ def light_check():
 
 pirs[0].detect()
 pirs[1].detect()
+pirs[2].detect()
 
 while True:
 
@@ -155,7 +155,22 @@ while True:
         pirs[pir].check()
 
     if s.state == 2:
-        print('mode 2')
+        print('time to show 2 state')
+
+        print('H:1:{0:0d} 2:{1:1d} 3:{2:2d} 4:{3:3d} 5: {4:4d}'.format(bulbs[0].h, bulbs[1].h, bulbs[2].h, bulbs[3].h,
+                                                                       bulbs[4].h))
+        print('H:6:{0:0d} 7:{1:1d} 8:{2:2d} 9:{3:3d} 10: {4:4d}'.format(bulbs[5].h, bulbs[6].h, bulbs[7].h, bulbs[8].h,
+                                                                        bulbs[9].h))
+        print('H:11:{0:0d} 12:{1:1d} 13:{2:2d} 14:{3:3d} 15: {4:4d}'.format(bulbs[10].h, bulbs[11].h, bulbs[12].h,
+                                                                            bulbs[13].h, bulbs[14].h))
+
+        print('B:1:{0:0d} 2:{1:1d} 3:{2:2d} 4:{3:3d} 5: {4:4d}'.format(bulbs[0].b, bulbs[1].b, bulbs[2].b, bulbs[3].b,
+                                                                       bulbs[4].b))
+        print('B:6:{0:0d} 7:{1:1d} 8:{2:2d} 9:{3:3d} 10: {4:4d}'.format(bulbs[5].b, bulbs[6].b, bulbs[7].b, bulbs[8].b,
+                                                                        bulbs[9].b))
+        print('B:11:{0:0d} 12:{1:1d} 13:{2:2d} 14:{3:3d} 15: {4:4d}'.format(bulbs[10].b, bulbs[11].b, bulbs[12].b,
+                                                                            bulbs[13].b, bulbs[14].b))
+
         if time.time() - s.stage_show_time > 0.2:
 
             if bulbs[s.stage_count].state == 2:
@@ -177,7 +192,7 @@ while True:
 
     if s.state == 1:
         if time.time() - s.stage_show_time > 0.2:
-            print('time to show')
+            print('time to show 1 state')
 
             print('H:1:{0:0d} 2:{1:1d} 3:{2:2d} 4:{3:3d} 5: {4:4d}'.format(bulbs[0].h, bulbs[1].h, bulbs[2].h, bulbs[3].h, bulbs[4].h))
             print('H:6:{0:0d} 7:{1:1d} 8:{2:2d} 9:{3:3d} 10: {4:4d}'.format(bulbs[5].h, bulbs[6].h, bulbs[7].h, bulbs[8].h, bulbs[9].h))
