@@ -196,13 +196,13 @@ while True:
                         bulbs[s.stage_count].h -= 65535
                     bulbs[s.stage_count].b = 60
 
-                s.stage_count += 1
-                s.stage_show_time = time.time()
-                print('update show_time')
+            s.stage_count += 1
+            s.stage_show_time = time.time()
+            print('update show_time')
 
-                if s.stage_count >= 15:
-                    s.stage_next += 1
-                    s.stage_count = 0
+            if s.stage_count >= 15:
+                s.stage_next += 1
+                s.stage_count = 0
 
         if pirs[0].state == 1:
 
