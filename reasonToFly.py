@@ -163,6 +163,9 @@ while True:
     if s.state == 2:
         print('mode 2')
         if time.time() - s.stage_show_time > 0.2:
+
+            print('mode 2 active')
+
             if bulbs[s.stage_count].state == 2:
                 if s.stage_next % 2 == 0:
                     bulbs[s.stage_count].h = 30000
