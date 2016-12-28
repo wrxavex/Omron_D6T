@@ -174,7 +174,7 @@ while True:
     if s.state == 1:
         if time.time() - s.stage_show_time > 0.5:
             print('stage 1')
-            print(bulbs[0].h)
+            print('b1' + str(bulbs[0].h))
 
             if bulbs[s.stage_count].state == 1:
                 if s.stage_next % 2 == 0:
