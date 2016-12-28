@@ -205,7 +205,7 @@ while True:
                     s.stage_count = 0
 
         if pirs[0].state == 1:
-            print ('pirs[0] == 1')
+
             if time.time() - pirs[0].show_time > 1:
                 if pirs[0].count % 2 == 0:
                     for bulb in range(0, 5):
