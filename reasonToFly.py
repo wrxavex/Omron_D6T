@@ -111,11 +111,11 @@ pir3.when_motion = mot3
 def light_check():
 
     if pirs[0].state == 1 and pirs[1].state == 1 and pirs[2].state == 1:
-        s.stage = 2
+        s.state = 2
         for bulb in range(0, 15):
             bulbs[bulb].state = 2
     else:
-        s.stage = 1
+        s.state = 1
 
         if pirs[0].state == 1:
             for bulb in range(0, 5):
@@ -146,14 +146,14 @@ while True:
 
     print('start reason to fly')
 
-    print('s.stage =' + s.stage)
+    print('s.stage =' + s.state)
 
     light_check()
 
     for pir in range(0, 3):
         pirs[pir].check()
 
-    if s.stage == 2:
+    if s.state == 2:
         if time.time() - s.stage_show_time > 0.2:
             if bulbs[s.stage_count].state == 2:
                 if s.stage_next % 2 == 0:
@@ -171,7 +171,7 @@ while True:
                     s.stage_next += 1
                     s.stage_count = 0
 
-    if s.stage == 1:
+    if s.state == 1:
         if time.time() - s.stage_show_time > 0.5:
             print('stage 1')
             print(bulbs[0].h)
