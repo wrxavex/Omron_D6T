@@ -178,7 +178,8 @@ while True:
     if s.state == 1:
         if time.time() - s.stage_show_time > 0.2:
             print('time to show')
-            print('H:1:{0:0d} 6:{1:1d} 11:{2:2d}'.format(bulbs[0].h, bulbs[5].h, bulbs[10].h))
+            print('H:1:{0:0d} 2:{1:1d} 3:{2:2d} 4:{3:3d} 5: {4:4d}'.format(bulbs[0].h, bulbs[1].h, bulbs[2].h, bulbs[3].h, bulbs[4].h))
+            print('H:6:{0:0d} 7:{1:1d} 8:{2:2d} 9:{3:3d} 10: {4:4d}'.format(bulbs[5].h, bulbs[6].h, bulbs[7].h, bulbs[8].h, bulbs[9].h))
             print('B:1:{0:0d} 6:{1:1d} 11:{2:2d}'.format(bulbs[0].b, bulbs[5].b, bulbs[10].b))
 
             if bulbs[s.stage_count].state == 0:
