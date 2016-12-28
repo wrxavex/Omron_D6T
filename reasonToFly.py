@@ -147,7 +147,7 @@ pirs[0].detect()
 while True:
 
     light_check()
-    print ('L.state: 1:{0:0d} 2:{1:1d} 5:{2:2d} 6:{3:3d} 10:{4:4d} 11:{5:5d}'.format(bulbs[0].state, bulbs[1].state, bulbs[5].state, bulbs[6].state, bulbs[10].state, bulbs[11].state))
+    # print ('L.state: 1:{0:0d} 2:{1:1d} 5:{2:2d} 6:{3:3d} 10:{4:4d} 11:{5:5d}'.format(bulbs[0].state, bulbs[1].state, bulbs[5].state, bulbs[6].state, bulbs[10].state, bulbs[11].state))
 
     for pir in range(0, 3):
         pirs[pir].check()
@@ -209,11 +209,13 @@ while True:
             if time.time() - pirs[0].show_time > 1:
                 if pirs[0].count % 2 == 0:
                     for bulb in range(0, 5):
-                        bulbs[bulb].h = 20000
+                        if bulbs[bulb].state == 1:
+                            bulbs[bulb].h = 20000
 
                 if pirs[0].count % 2 == 1:
                     for bulb in range(0, 5):
-                        bulbs[bulb].h = 40000
+                        if bulbs[bulb].state == 1:
+                            bulbs[bulb].h = 40000
 
                 pirs[0].show_time = time.time()
                 pirs[0].count += 1
@@ -227,11 +229,13 @@ while True:
             if time.time() - pirs[1].show_time > 1:
                 if pirs[1].count % 2 == 0:
                     for bulb in range(5, 10):
-                        bulbs[bulb].h = 20000
+                        if bulbs[bulb].state == 1:
+                            bulbs[bulb].h = 20000
 
                 if pirs[1].count % 2 == 1:
                     for bulb in range(5, 10):
-                        bulbs[bulb].h = 40000
+                        if bulbs[bulb].state == 1:
+                            bulbs[bulb].h = 40000
 
                 pirs[1].count += 1
                 if pirs[1].count >= 5:
@@ -244,10 +248,12 @@ while True:
             if time.time() - pirs[2].show_time > 1:
                 if pirs[2].count % 2 == 0:
                     for bulb in range(10, 15):
-                        bulbs[bulb].h = 20000
+                        if bulbs[bulb].state == 1:
+                            bulbs[bulb].h = 20000
 
                 if pirs[2].count % 2 == 1:
                     for bulb in range(10, 15):
+                        if bulbs[bulb].state == 1:
                         bulbs[bulb].h = 40000
 
                 pirs[2].count += 1
