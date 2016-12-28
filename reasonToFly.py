@@ -254,7 +254,7 @@ while True:
                 if pirs[2].count % 2 == 1:
                     for bulb in range(10, 15):
                         if bulbs[bulb].state == 1:
-                        bulbs[bulb].h = 40000
+                            bulbs[bulb].h = 40000
 
                 pirs[2].count += 1
                 if pirs[2].count >= 5:
