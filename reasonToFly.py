@@ -1,6 +1,4 @@
 from gpiozero import MotionSensor
-from gpiozero import LED
-from signal import pause
 import time
 import random
 
@@ -16,7 +14,6 @@ logging.basicConfig()
 b = Bridge('192.168.1.178', 'YxPYRWNawywC-sKHkjuRho7iOwMMSrn3di2ETF74')  # Enter bridge IP here.
 
 lights = b.get_light_objects()
-
 
 class Stage:
 
@@ -147,6 +144,8 @@ def light_check():
 
 while True:
 
+    print('start reason to fly')
+
     light_check()
 
     for pir in range(0, 3):
@@ -172,6 +171,8 @@ while True:
 
     if s.stage == 1:
         if time.time() - s.stage_show_time > 0.5:
+            print('{0:0d}'.format(bulbs[s.stage_count].h))
+
             if bulbs[s.stage_count].state == 1:
                 if s.stage_next % 2 == 0:
                     bulbs[s.stage_count].h += 1500
