@@ -91,17 +91,17 @@ for sensor in range(0, 3):
 
 def mot1():
     print('motion sensor1')
-    pirs[0].state = 1
+    pirs[0].detect()
 
 
 def mot2():
     print('motion sensor2')
-    pirs[1].state = 1
+    pirs[1].detect()
 
 
 def mot3():
     print('motion sensor3')
-    pirs[2].state = 1
+    pirs[2].detect()
 
 pir1.when_motion = mot1
 pir2.when_motion = mot2
@@ -142,7 +142,7 @@ def light_check():
             for bulb in range(10, 15):
                 bulbs[bulb].state = 0
 
-pirs[0].state = 1
+pirs[0].detect()
 
 while True:
 
