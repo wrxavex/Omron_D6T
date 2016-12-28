@@ -155,6 +155,7 @@ while True:
     light_check()
     print(time.time() - s.stage_show_time)
     print('s.stage_count:' + str(s.stage_count))
+    print('s.stage_next:' + str(s.stage_next))
 
     for pir in range(0, 3):
         pirs[pir].check()
