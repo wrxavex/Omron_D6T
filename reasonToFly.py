@@ -171,24 +171,24 @@ while True:
 
     if s.stage == 1:
         if time.time() - s.stage_show_time > 0.5:
-
+            print(bulbs[0].h)
 
             if bulbs[s.stage_count].state == 1:
                 if s.stage_next % 2 == 0:
                     bulbs[s.stage_count].h += 1500
-                    print(bulbs[0].h)
+
                     bulbs[s.stage_count].b = 120
 
                 if bulbs[s.stage_count].stage == 0:
                     bulbs[s.stage_count].h += 1500
                     bulbs[s.stage_count].b = 60
 
-                s.stage_count += 1
-                s.stage_show_time = time.time()
+            s.stage_count += 1
+            s.stage_show_time = time.time()
 
-                if s.stage_count >= 15:
-                    s.stage_next += 1
-                    s.stage_count = 0
+            if s.stage_count >= 15:
+                s.stage_next += 1
+                s.stage_count = 0
 
         if pirs[0].state == 1:
             if time.time() - pirs[0].show_time > 1:
