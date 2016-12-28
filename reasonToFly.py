@@ -151,7 +151,7 @@ while True:
         pirs[pir].check()
 
     if s.state == 2:
-        print ('mode 2')
+        print('mode 2')
         if time.time() - s.stage_show_time > 0.2:
             if bulbs[s.stage_count].state == 2:
                 if s.stage_next % 2 == 0:
@@ -185,13 +185,13 @@ while True:
                     bulbs[s.stage_count].h += 1500
                     bulbs[s.stage_count].b = 60
 
-            s.stage_count += 1
-            s.stage_show_time = time.time()
-            print('update show_time')
+                s.stage_count += 1
+                s.stage_show_time = time.time()
+                print('update show_time')
 
-            if s.stage_count >= 15:
-                s.stage_next += 1
-                s.stage_count = 0
+                if s.stage_count >= 15:
+                    s.stage_next += 1
+                    s.stage_count = 0
 
         if pirs[0].state == 1:
             print ('pirs[0] == 1')
