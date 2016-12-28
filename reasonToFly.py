@@ -146,6 +146,8 @@ while True:
 
     print('start reason to fly')
 
+    print('s.stage =' + s.stage)
+
     light_check()
 
     for pir in range(0, 3):
