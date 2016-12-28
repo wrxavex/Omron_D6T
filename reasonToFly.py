@@ -214,11 +214,12 @@ while True:
                     for bulb in range(0, 5):
                         bulbs[bulb].h = 40000
 
+                pirs[0].show_time = time.time()
                 pirs[0].count += 1
                 if pirs[0].count >= 5:
                     pirs[0].next += 1
                     pirs[0].count = 0
-                pirs[0].show_time = time.time()
+
 
         if pirs[1].state == 1:
             print('pirs[1] == 1')
