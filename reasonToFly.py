@@ -155,6 +155,7 @@ while True:
         print ('pir check')
 
     if s.state == 2:
+        print ('mode 2')
         if time.time() - s.stage_show_time > 0.2:
             if bulbs[s.stage_count].state == 2:
                 if s.stage_next % 2 == 0:
@@ -173,6 +174,7 @@ while True:
                     s.stage_count = 0
 
     if s.state == 1:
+        print ('mode 1')
         if time.time() - s.stage_show_time > 0.5:
             if bulbs[s.stage_count].state == 1:
                 if s.stage_next % 2 == 0:
