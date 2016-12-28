@@ -155,7 +155,6 @@ while True:
         print('mode 2')
         if time.time() - s.stage_show_time > 0.2:
 
-
             if bulbs[s.stage_count].state == 2:
                 if s.stage_next % 2 == 0:
                     bulbs[s.stage_count].h = 30000
@@ -176,8 +175,8 @@ while True:
     if s.state == 1:
         if time.time() - s.stage_show_time > 0.02:
             print('time to show')
-            print('H:1:{0:0d} 6:{0:1d} 11:{0:2d}'.format(bulbs[0].h, bulbs[5].h, bulbs[10].h))
-            print('B:1:{0:0d} 6:{0:1d} 11:{0:2d}'.format(bulbs[0].b, bulbs[1].b, bulbs[10].b))
+            print('H:1:{0:0d} 6:{1:1d} 11:{2:2d}'.format(bulbs[0].h, bulbs[5].h, bulbs[10].h))
+            print('B:1:{0:0d} 6:{1:1d} 11:{2:2d}'.format(bulbs[0].b, bulbs[5].b, bulbs[10].b))
             if bulbs[s.stage_count].state == 0:
 
                 print('bulbs active')
