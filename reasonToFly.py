@@ -146,7 +146,7 @@ while True:
 
     print('start reason to fly')
 
-    print('s.stage =' + s.state)
+    print('s.stage =' + str(s.state))
 
     light_check()
 
