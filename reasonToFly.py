@@ -144,8 +144,9 @@ def light_check():
 
 while True:
 
-
     light_check()
+    print(time.time() - s.stage_show_time)
+
 
     for pir in range(0, 3):
         pirs[pir].check()
