@@ -176,7 +176,7 @@ while True:
                     s.stage_count = 0
 
     if s.state == 1:
-        print ('mode 1')
+        print('mode 1')
         if time.time() - s.stage_show_time > 0.2:
             print('time to show')
             if bulbs[s.stage_count].state == 1:
