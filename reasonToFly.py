@@ -144,16 +144,11 @@ def light_check():
 
 while True:
 
-    print('start reason to fly')
-
-    print('s.state =' + str(s.state))
 
     light_check()
 
     for pir in range(0, 3):
         pirs[pir].check()
-        print('pir check')
-    print(time.time() - s.stage_show_time)
 
     if s.state == 2:
         print ('mode 2')
