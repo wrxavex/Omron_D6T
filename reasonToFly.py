@@ -177,7 +177,7 @@ while True:
     if s.state == 1:
         if time.time() - s.stage_show_time > 0.02:
             print('time to show')
-            print('H:1:{0:0d} 6:{0:1d} 11:{0:2d}'.format(bulbs[0].h, bulbs[5].h), bulbs[10].h)
+            print('H:1:{0:0d} 6:{0:1d} 11:{0:2d} '.format(bulbs[0].h, bulbs[5].h), bulbs[10].h)
             print('B:1:{0:0d} 6:{0:1d} 11:{0:2d}'.format(bulbs[0].b, bulbs[1].b), bulbs[10].b)
             if bulbs[s.stage_count].state == 0:
 
