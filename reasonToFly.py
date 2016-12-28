@@ -153,7 +153,7 @@ while True:
     for pir in range(0, 3):
         pirs[pir].check()
         print('pir check')
-        print(time.time() - s.stage_show_time)
+    print(time.time() - s.stage_show_time)
 
     if s.state == 2:
         print ('mode 2')
