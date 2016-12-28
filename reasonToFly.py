@@ -121,7 +121,7 @@ def light_check():
             for bulb in range(0, 5):
                 bulbs[bulb].state = 1
 
-        elif pirs[0].state == 0:
+        if pirs[0].state == 0:
             for bulb in range(0, 5):
                 bulbs[bulb].state = 0
 
@@ -129,7 +129,7 @@ def light_check():
             for bulb in range(5, 10):
                 bulbs[bulb].state = 1
 
-        elif pirs[1].state == 0:
+        if pirs[1].state == 0:
             for bulb in range(5, 10):
                 bulbs[bulb].state = 0
 
@@ -137,7 +137,7 @@ def light_check():
             for bulb in range(10, 15):
                 bulbs[bulb].state = 1
 
-        elif pirs[2].state == 0:
+        if pirs[2].state == 0:
             for bulb in range(10, 15):
                 bulbs[bulb].state = 0
 
