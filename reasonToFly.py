@@ -117,11 +117,19 @@ def light_check():
     else:
         s.state = 1
 
+        print('s.state = 1')
+
         if pirs[0].state == 1:
+
+            print('set bulbs to 1')
+
             for bulb in range(0, 5):
                 bulbs[bulb].state = 1
 
         if pirs[0].state == 0:
+
+            print('set bulbs to 0')
+
             for bulb in range(0, 5):
                 bulbs[bulb].state = 0
 

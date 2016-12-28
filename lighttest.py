@@ -107,7 +107,8 @@ lights = b.get_light_objects()
 # def light_11(sleeptime, *args):
 #
 #     lights[10].on = True
-#     lights[10].saturation = 254
+#     lights[10].
+#  = 254
 #     print("light 11 on")
 #
 #     while(1):
