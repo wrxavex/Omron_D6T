@@ -175,6 +175,8 @@ while True:
 
         if time.time() - s.stage_show_time > 0.2:
 
+            s.stage_show_time = time.time()
+
             if bulbs[s.stage_count].state == 2:
                 if s.stage_next % 2 == 0:
                     bulbs[s.stage_count].h = 30000
@@ -185,8 +187,8 @@ while True:
                     bulbs[s.stage_count].b = 15
 
             s.stage_count += 1
-            # s.stage_show_time = time.time()
-            print('update show_time')
+
+            print('update show 2 time')
 
             if s.stage_count >= 15:
                 s.stage_next += 1
