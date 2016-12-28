@@ -198,7 +198,7 @@ while True:
                     bulbs[s.stage_count].b = 60
 
             s.stage_count += 1
-            s.main_color += 1500
+            s.main_color += 100
             if s.main_color > 65535:
                 s.main_color -= 65535
             s.stage_show_time = time.time()
