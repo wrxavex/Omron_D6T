@@ -153,9 +153,6 @@ def light_check():
 while True:
 
     light_check()
-    print(time.time() - s.stage_show_time)
-    print('s.stage_count:' + str(s.stage_count))
-    print('s.stage_next:' + str(s.stage_next))
 
     for pir in range(0, 3):
         pirs[pir].check()
@@ -164,7 +161,6 @@ while True:
         print('mode 2')
         if time.time() - s.stage_show_time > 0.2:
 
-            print('mode 2 active')
 
             if bulbs[s.stage_count].state == 2:
                 if s.stage_next % 2 == 0:
@@ -184,7 +180,6 @@ while True:
                     s.stage_count = 0
 
     if s.state == 1:
-        print('mode 1')
         if time.time() - s.stage_show_time > 0.2:
             print('time to show')
             if bulbs[s.stage_count].state == 0:
