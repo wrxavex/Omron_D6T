@@ -184,9 +184,9 @@ while True:
                     bulbs[s.stage_count].h = 50000
                     bulbs[s.stage_count].b = 15
 
-            s.stage_count += 1
-            s.stage_show_time = time.time()
-            print('update show_time')
+                s.stage_count += 1
+                s.stage_show_time = time.time()
+                print('update show_time')
 
             if s.stage_count >= 15:
                 s.stage_next += 1
