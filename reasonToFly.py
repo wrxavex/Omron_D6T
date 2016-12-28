@@ -80,7 +80,7 @@ class PirS:
         self.toggle_time = time.time()
 
     def check(self):
-        if time.time() - self.toggle_time > 10:
+        if time.time() - self.toggle_time > 20:
             self.state = 0
 
 pirs = {}
@@ -143,6 +143,7 @@ def light_check():
                 bulbs[bulb].state = 0
 
 pirs[0].detect()
+pirs[1].detect()
 
 while True:
 
@@ -165,19 +166,20 @@ while True:
                     bulbs[s.stage_count].h = 50000
                     bulbs[s.stage_count].b = 15
 
-                s.stage_count += 1
-                # s.stage_show_time = time.time()
-                print('update show_time')
+            s.stage_count += 1
+            s.stage_show_time = time.time()
+            print('update show_time')
 
-                if s.stage_count >= 15:
-                    s.stage_next += 1
-                    s.stage_count = 0
+            if s.stage_count >= 15:
+                s.stage_next += 1
+                s.stage_count = 0
 
     if s.state == 1:
         if time.time() - s.stage_show_time > 0.2:
             print('time to show')
             print('H:1:{0:0d} 6:{1:1d} 11:{2:2d}'.format(bulbs[0].h, bulbs[5].h, bulbs[10].h))
             print('B:1:{0:0d} 6:{1:1d} 11:{2:2d}'.format(bulbs[0].b, bulbs[5].b, bulbs[10].b))
+
             if bulbs[s.stage_count].state == 0:
 
                 print('bulbs active')
@@ -222,7 +224,6 @@ while True:
                 if pirs[0].count >= 5:
                     pirs[0].next += 1
                     pirs[0].count = 0
-
 
         if pirs[1].state == 1:
             print('pirs[1] == 1')
