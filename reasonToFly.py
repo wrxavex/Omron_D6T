@@ -142,6 +142,7 @@ def light_check():
             for bulb in range(10, 15):
                 bulbs[bulb].state = 0
 
+pirs[0].state = 1
 
 while True:
 
@@ -153,8 +154,6 @@ while True:
     if s.state == 2:
         print('mode 2')
         if time.time() - s.stage_show_time > 0.2:
-
-
 
 
             if bulbs[s.stage_count].state == 2:
