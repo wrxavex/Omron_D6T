@@ -22,6 +22,7 @@ class Stage:
         self.stage_count = 0
         self.stage_next = 0
         self.stage_show_time = 0
+        self.main_color = 0
 
 s = Stage()
 
@@ -186,19 +187,20 @@ while True:
 
                 if s.stage_next % 2 == 0:
                     print('%2 == 0')
-                    bulbs[s.stage_count].h += 1500
-                    if bulbs[s.stage_count].h > 65535:
-                        bulbs[s.stage_count].h -= 65535
+                    bulbs[s.stage_count].h = s.main_color
+
                     bulbs[s.stage_count].b = 120
 
                 if s.stage_next % 2 == 1:
                     print ('%2 == 1')
-                    bulbs[s.stage_count].h += 1500
-                    if bulbs[s.stage_count].h > 65535:
-                        bulbs[s.stage_count].h -= 65535
+                    bulbs[s.stage_count].h = s.main_color
+
                     bulbs[s.stage_count].b = 60
 
             s.stage_count += 1
+            s.main_color += 1500
+            if s.main_color > 65535:
+                s.main_color -= 65535
             s.stage_show_time = time.time()
             print('update show_time')
 
