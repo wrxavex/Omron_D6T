@@ -186,11 +186,15 @@ while True:
                 if s.stage_next % 2 == 0:
                     print('%2 == 0')
                     bulbs[s.stage_count].h += 1500
+                    if bulbs[s.stage_count].h > 65535:
+                        bulbs[s.stage_count].h -= 65535
                     bulbs[s.stage_count].b = 120
 
                 if s.stage_next % 2 == 1:
                     print ('%2 == 1')
                     bulbs[s.stage_count].h += 1500
+                    if bulbs[s.stage_count].h > 65535:
+                        bulbs[s.stage_count].h -= 65535
                     bulbs[s.stage_count].b = 60
 
                 s.stage_count += 1
