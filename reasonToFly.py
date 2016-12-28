@@ -173,7 +173,7 @@ while True:
         print('B:11:{0:0d} 12:{1:1d} 13:{2:2d} 14:{3:3d} 15: {4:4d}'.format(bulbs[10].b, bulbs[11].b, bulbs[12].b,
                                                                             bulbs[13].b, bulbs[14].b))
 
-        if time.time() - s.stage_show_time > 2
+        if time.time() - s.stage_show_time > 2:
 
             s.stage_show_time = time.time()
 
