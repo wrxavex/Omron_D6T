@@ -152,7 +152,8 @@ while True:
 
     for pir in range(0, 3):
         pirs[pir].check()
-        print ('pir check')
+        print('pir check')
+        print(s.stage_show_time)
 
     if s.state == 2:
         print ('mode 2')
@@ -195,6 +196,7 @@ while True:
                 s.stage_count = 0
 
         if pirs[0].state == 1:
+            print ('pirs[0] == 1')
             if time.time() - pirs[0].show_time > 1:
                 if pirs[0].count % 2 == 0:
                     for bulb in range(0, 5):
@@ -211,6 +213,7 @@ while True:
                 pirs[0].show_time = time.time()
 
         if pirs[1].state == 1:
+            print('pirs[1] == 1')
             if time.time() - pirs[1].show_time > 1:
                 if pirs[1].count % 2 == 0:
                     for bulb in range(5, 10):
@@ -227,6 +230,7 @@ while True:
                 pirs[1].show_time = time.time()
 
         if pirs[2].state == 1:
+            print('pirs[2] == 1')
             if time.time() - pirs[2].show_time > 1:
                 if pirs[2].count % 2 == 0:
                     for bulb in range(10, 15):
