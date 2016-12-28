@@ -169,6 +169,7 @@ while True:
 
                 s.stage_count += 1
                 s.stage_show_time = time.time()
+                print('update show_time')
 
                 if s.stage_count >= 15:
                     s.stage_next += 1
@@ -190,6 +191,7 @@ while True:
 
             s.stage_count += 1
             s.stage_show_time = time.time()
+            print('update show_time')
 
             if s.stage_count >= 15:
                 s.stage_next += 1
