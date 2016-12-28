@@ -4,10 +4,11 @@ from signal import pause
 from time import sleep
 import random
 
-pir1 = MotionSensor(17)
-pir2 = MotionSensor(27)
-pir3 = MotionSensor(22)
-# led1 = LED(5)
+pir1 = MotionSensor(4)
+pir2 = MotionSensor(17)
+pir3 = MotionSensor(18)
+
+led1 = LED(27)
 # led2 = LED(4)
 
 from phue import Bridge
@@ -17,12 +18,11 @@ import thread
 
 logging.basicConfig()
 
-lightrunning = {1:False, 2:False, 3:False}
+lightrunning = {1: False, 2: False, 3: False}
 
 b = Bridge('192.168.1.178', 'YxPYRWNawywC-sKHkjuRho7iOwMMSrn3di2ETF74')  # Enter bridge IP here.
 
 lights = b.get_light_objects()
-
 
 
 # class light_status():
@@ -325,35 +325,154 @@ lights = b.get_light_objects()
 
 def mot1():
     print('motion sensor1')
-    # led1.on()
-    lights[5].on = True
-    lights[5].brightness = 127
-    sleep(30)
-    lights[5].on = False
-    # led1.off()
+    lights[0].on = True
+    lights[0].brightness = 32
+    lights[0].hue = 65000
+    sleep(0.5)
+    lights[1].on = True
+    lights[1].brightness = 32
+    lights[1].hue = 65000
+    sleep(0.5)
+    lights[2].on = True
+    lights[2].brightness = 32
+    lights[2].hue = 65000
+    sleep(0.5)
+    lights[3].on = True
+    lights[3].brightness = 32
+    lights[3].hue = 65000
+    sleep(0.5)
+    lights[4].on = True
+    lights[4].brightness = 32
+    lights[4].hue = 65000
+    sleep(0.5)
+
+    lights[0].on = True
+    lights[0].brightness = 215
+    lights[0].hue = 32768
+    sleep(0.5)
+    lights[1].on = True
+    lights[1].brightness = 215
+    lights[1].hue = 32768
+    sleep(0.5)
+    lights[2].on = True
+    lights[2].brightness = 215
+    lights[2].hue = 32768
+    sleep(0.5)
+    lights[3].on = True
+    lights[3].brightness = 215
+    lights[3].hue = 32768
+    sleep(0.5)
+    lights[4].on = True
+    lights[4].brightness = 215
+    lights[4].hue = 32768
+    sleep(0.5)
 
 
 def mot2():
     print('motion sensor2')
-    # led2.on()
+    lights[5].on = True
+    lights[5].brightness = 32
+    lights[5].hue = 65000
+    sleep(0.5)
     lights[6].on = True
-    lights[6].brightness = 127
-    sleep(30)
-    lights[6].on = False
-    # led2.off()
+    lights[6].brightness = 32
+    lights[6].hue = 65000
+    sleep(0.5)
+    lights[7].on = True
+    lights[7].brightness = 32
+    lights[7].hue = 65000
+    sleep(0.5)
+    lights[8].on = True
+    lights[8].brightness = 32
+    lights[8].hue = 65000
+    sleep(0.5)
+    lights[9].on = True
+    lights[9].brightness = 32
+    lights[9].hue = 65000
+    sleep(0.5)
+
+    lights[5].on = True
+    lights[5].brightness = 215
+    lights[5].hue = 32768
+    sleep(0.5)
+    lights[6].on = True
+    lights[6].brightness = 215
+    lights[6].hue = 32768
+    sleep(0.5)
+    lights[7].on = True
+    lights[7].brightness = 215
+    lights[7].hue = 32768
+    sleep(0.5)
+    lights[8].on = True
+    lights[8].brightness = 215
+    lights[8].hue = 32768
+    sleep(0.5)
+    lights[9].on = True
+    lights[9].brightness = 215
+    lights[9].hue = 32768
+    sleep(0.5)
 
 
 def mot3():
-    print('motion sensor2')
-    # led2.on()
-    lights[7].on = True
-    lights[7].brightness = 127
-    sleep(30)
-    lights[7].on = False
-    # led2.off()
+    print('motion sensor3')
+    lights[10].on = True
+    lights[10].brightness = 32
+    lights[10].hue = 65000
+    sleep(0.5)
+    lights[11].on = True
+    lights[11].brightness = 32
+    lights[11].hue = 65000
+    sleep(0.5)
+    lights[12].on = True
+    lights[12].brightness = 32
+    lights[12].hue = 65000
+    sleep(0.5)
+    lights[13].on = True
+    lights[13].brightness = 32
+    lights[13].hue = 65000
+    sleep(0.5)
+    lights[14].on = True
+    lights[14].brightness = 32
+    lights[14].hue = 65000
+    sleep(0.5)
+
+    lights[10].on = True
+    lights[10].brightness = 215
+    lights[10].hue = 32768
+    sleep(0.5)
+    lights[11].on = True
+    lights[11].brightness = 215
+    lights[11].hue = 32768
+    sleep(0.5)
+    lights[12].on = True
+    lights[12].brightness = 215
+    lights[12].hue = 32768
+    sleep(0.5)
+    lights[13].on = True
+    lights[13].brightness = 215
+    lights[13].hue = 32768
+    sleep(0.5)
+    lights[14].on = True
+    lights[14].brightness = 215
+    lights[14].hue = 32768
+    sleep(0.5)
 
 
 pir1.when_motion = mot1
 pir2.when_motion = mot2
 pir3.when_motion = mot3
+
+while True:
+    for y in range(26):
+        for x in range(15):
+            lights[x].on = True
+            lights[x].brightness = 15
+            sleep(0.2)
+            lights[x].brightness = 215
+            lights[x].hue = 1500 * y + 15000
+            print("x: " + str(x))
+            print("y: " + str(y))
+            print("hue: " + str(1500 * y + 15000))
+            sleep(0.2)
+
 pause()
