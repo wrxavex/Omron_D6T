@@ -39,14 +39,14 @@ class LightS:
     def toggle(self, state):
         self.state = state
 
-    def update(self, temp_h, temp_s, temp_b):
-        self.h = temp_h
-        self.s = temp_s
-        self.b = temp_b
-
-        lights[self.no].hue = self.h
-        lights[self.saturation] = self.s
-        lights[self.no].brightness = self.b
+    # def update(self, temp_h, temp_s, temp_b):
+    #     self.h = temp_h
+    #     self.s = temp_s
+    #     self.b = temp_b
+    #
+    #     lights[self.no].hue = self.h
+    #     lights[self.saturation] = self.s
+    #     lights[self.no].brightness = self.b
 
     def on(self):
         self.power = 1
