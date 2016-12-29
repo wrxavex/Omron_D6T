@@ -259,8 +259,8 @@ while True:
 
             s.stage_count += 1
             s.main_color += 100
-            if s.main_color > 65535:
-                s.main_color = 50000
+            if s.main_color > 50000:
+                s.main_color = 20000
             s.stage_show_time = time.time()
             print('update show_time')
 
