@@ -42,7 +42,7 @@ def light_1(sleeptime, *args):
 
     for light in lights:
         light.on = False
-
+z
     led.off()
     print("light 1 off")
     ls.light1_status = 0
