@@ -31,7 +31,7 @@ class LightS:
 
     def __init__(self):
         self.no = 0
-        self.h = 0
+        self.h = 20000
         self.s = 254
         self.b = 254
         self.state = 0
@@ -236,7 +236,7 @@ while True:
             s.stage_count += 1
             s.main_color += 100
             if s.main_color > 65535:
-                s.main_color -= 65535
+                s.main_color = 20000
             s.stage_show_time = time.time()
             print('update show_time')
 
