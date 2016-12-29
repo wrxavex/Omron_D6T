@@ -200,7 +200,7 @@ while True:
                 s.stage_count = 0
 
     if s.state == 1:
-        if time.time() - s.stage_show_time > 0.2:
+        if time.time() - s.stage_show_time > 0.4:
             print('time to show 1 state')
 
             print('P: 1:{0:0d} 2:{1:1d} 3:{2:2d}'.format(pirs[0].state, pirs[1].state, pirs[2].state))
@@ -246,7 +246,7 @@ while True:
 
         if pirs[0].state == 1:
 
-            if time.time() - pirs[0].show_time > 0.2:
+            if time.time() - pirs[0].show_time > 0.5:
                 if pirs[0].count % 2 == 0:
                     for bulb in range(0, 5):
                         if bulbs[bulb].state == 1:
@@ -270,7 +270,7 @@ while True:
                     pirs[0].count = 0
 
         if pirs[1].state == 1:
-            if time.time() - pirs[1].show_time > 0.2:
+            if time.time() - pirs[1].show_time > 0.5:
                 if pirs[1].count % 2 == 0:
                     for bulb in range(5, 10):
                         if bulbs[bulb].state == 1:
@@ -294,7 +294,7 @@ while True:
                 pirs[1].show_time = time.time()
 
         if pirs[2].state == 1:
-            if time.time() - pirs[2].show_time > 0.2:
+            if time.time() - pirs[2].show_time > 0.5:
                 if pirs[2].count % 2 == 0:
                     for bulb in range(10, 15):
                         if bulbs[bulb].state == 1:
