@@ -80,7 +80,7 @@ class PirS:
         self.toggle_time = time.time()
 
     def check(self):
-        if time.time() - self.toggle_time > 30:
+        if time.time() - self.toggle_time > 15:
             self.state = 0
 
 pirs = {}
