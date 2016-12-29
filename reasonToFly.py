@@ -233,10 +233,12 @@ while True:
                 print('%2 == 0')
                 bulbs[s.stage_count].h = s.main_color
                 bulbs[s.stage_count].b = 254
+                bulbs[s.stage_count].s = 254
 
 
                 lights[s.stage_count].hue = bulbs[s.stage_count].h
                 lights[s.stage_count].brightness = bulbs[s.stage_count].b
+                lights[s.stage_count].saturation = bulbs[s.stage_count].s
 
 
                 # if s.stage_next % 2 == 0:
