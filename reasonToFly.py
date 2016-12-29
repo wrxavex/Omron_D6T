@@ -240,7 +240,6 @@ while True:
                 lights[s.stage_count].brightness = bulbs[s.stage_count].b
                 lights[s.stage_count].saturation = bulbs[s.stage_count].s
 
-                lights[s.stage_count].alert()
 
 
                 # if s.stage_next % 2 == 0:
