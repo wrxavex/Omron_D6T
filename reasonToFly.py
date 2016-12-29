@@ -80,7 +80,7 @@ class PirS:
         self.toggle_time = time.time()
 
     def check(self):
-        if time.time() - self.toggle_time > 20:
+        if time.time() - self.toggle_time > 30:
             self.state = 0
 
 pirs = {}
@@ -183,13 +183,19 @@ while True:
             s.stage_show_time = time.time()
 
             if bulbs[s.stage_count].state == 2:
-                if s.stage_next % 2 == 0:
-                    bulbs[s.stage_count].h = 30000
-                    bulbs[s.stage_count].b = 215
 
-                if s.stage_next % 2 == 1:
-                    bulbs[s.stage_count].h = 50000
-                    bulbs[s.stage_count].b = 15
+
+                bulbs[s.stage_count].h = 30000
+                bulbs[s.stage_count].b = 215
+
+
+                # if s.stage_next % 2 == 0:
+                #     bulbs[s.stage_count].h = 30000
+                #     bulbs[s.stage_count].b = 215
+                #
+                # if s.stage_next % 2 == 1:
+                #     bulbs[s.stage_count].h = 50000
+                #     bulbs[s.stage_count].b = 15
 
             s.stage_count += 1
 
@@ -217,21 +223,29 @@ while True:
 
                 print('bulbs active')
 
-                if s.stage_next % 2 == 0:
-                    print('%2 == 0')
-                    bulbs[s.stage_count].h = s.main_color
-                    bulbs[s.stage_count].b = 120
+                print('%2 == 0')
+                bulbs[s.stage_count].h = s.main_color
+                bulbs[s.stage_count].b = 120
 
-                    lights[s.stage_count].hue = bulbs[s.stage_count].h
-                    lights[s.stage_count].brightness = bulbs[s.stage_count].b
+                lights[s.stage_count].hue = bulbs[s.stage_count].h
+                lights[s.stage_count].brightness = bulbs[s.stage_count].b
 
-                if s.stage_next % 2 == 1:
-                    print ('%2 == 1')
-                    bulbs[s.stage_count].h = s.main_color
-                    bulbs[s.stage_count].b = 60
 
-                    lights[s.stage_count].hue = bulbs[s.stage_count].h
-                    lights[s.stage_count].brightness = bulbs[s.stage_count].b
+                # if s.stage_next % 2 == 0:
+                #     print('%2 == 0')
+                #     bulbs[s.stage_count].h = s.main_color
+                #     bulbs[s.stage_count].b = 120
+                #
+                #     lights[s.stage_count].hue = bulbs[s.stage_count].h
+                #     lights[s.stage_count].brightness = bulbs[s.stage_count].b
+                #
+                # if s.stage_next % 2 == 1:
+                #     print ('%2 == 1')
+                #     bulbs[s.stage_count].h = s.main_color
+                #     bulbs[s.stage_count].b = 60
+                #
+                #     lights[s.stage_count].hue = bulbs[s.stage_count].h
+                #     lights[s.stage_count].brightness = bulbs[s.stage_count].b
 
             s.stage_count += 1
             s.main_color += 100
@@ -253,7 +267,7 @@ while True:
                             bulbs[bulb].h = 0
 
                             lights[s.stage_count].hue = bulbs[s.stage_count].h
-                            lights[s.stage_count].brightness = bulbs[s.stage_count].b
+                            # lights[s.stage_count].brightness = bulbs[s.stage_count].b
 
                 if pirs[0].count % 2 == 1:
                     for bulb in range(0, 5):
@@ -261,7 +275,7 @@ while True:
                             bulbs[bulb].h = 10000
 
                             lights[s.stage_count].hue = bulbs[s.stage_count].h
-                            lights[s.stage_count].brightness = bulbs[s.stage_count].b
+                            # lights[s.stage_count].brightness = bulbs[s.stage_count].b
 
                 pirs[0].show_time = time.time()
                 pirs[0].count += 1
@@ -277,7 +291,7 @@ while True:
                             bulbs[bulb].h = 0
 
                             lights[s.stage_count].hue = bulbs[s.stage_count].h
-                            lights[s.stage_count].brightness = bulbs[s.stage_count].b
+                            # lights[s.stage_count].brightness = bulbs[s.stage_count].b
 
                 if pirs[1].count % 2 == 1:
                     for bulb in range(5, 10):
@@ -285,7 +299,7 @@ while True:
                             bulbs[bulb].h = 10000
 
                             lights[s.stage_count].hue = bulbs[s.stage_count].h
-                            lights[s.stage_count].brightness = bulbs[s.stage_count].b
+                            # lights[s.stage_count].brightness = bulbs[s.stage_count].b
 
                 pirs[1].count += 1
                 if pirs[1].count >= 5:
@@ -301,7 +315,7 @@ while True:
                             bulbs[bulb].h = 0
 
                             lights[s.stage_count].hue = bulbs[s.stage_count].h
-                            lights[s.stage_count].brightness = bulbs[s.stage_count].b
+                            # lights[s.stage_count].brightness = bulbs[s.stage_count].b
 
                 if pirs[2].count % 2 == 1:
                     for bulb in range(10, 15):
@@ -309,7 +323,7 @@ while True:
                             bulbs[bulb].h = 10000
 
                             lights[s.stage_count].hue = bulbs[s.stage_count].h
-                            lights[s.stage_count].brightness = bulbs[s.stage_count].b
+                            # lights[s.stage_count].brightness = bulbs[s.stage_count].b
 
                 pirs[2].count += 1
                 if pirs[2].count >= 5:
