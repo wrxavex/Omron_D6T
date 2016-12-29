@@ -22,7 +22,7 @@ class Stage:
         self.stage_count = 0
         self.stage_next = 0
         self.stage_show_time = 0
-        self.main_color = 0
+        self.main_color = 20000
 
 s = Stage()
 
