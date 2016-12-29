@@ -191,14 +191,14 @@ while True:
                 # lights[s.stage_count].brightness = bulbs[s.stage_count].b
 
                 if s.stage_next % 2 == 0:
-                    bulbs[s.stage_count].h = 41250 + random(0, 15000)
+                    bulbs[s.stage_count].h = 41250 + random.random(0, 15000)
                     bulbs[s.stage_count].b = 254
 
                     lights[s.stage_count].hue = bulbs[s.stage_count].h
                     lights[s.stage_count].brightness = bulbs[s.stage_count].b
 
                 if s.stage_next % 2 == 1:
-                    bulbs[s.stage_count].h = 32768 + random( 0, 15000)
+                    bulbs[s.stage_count].h = 32768 + random.random( 0, 15000)
                     bulbs[s.stage_count].b = 15
 
                     lights[s.stage_count].hue = bulbs[s.stage_count].h
